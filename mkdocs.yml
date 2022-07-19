@@ -1,1 +1,40 @@
-site_name: My Docs
+site_name: 'コジオン: チェス'
+site_description: 'チェスの備忘録です。'
+site_author: 'Hideyuki Kojima'
+site_url: 'https://kojion.github.io/chess/'
+copyright: 'Copyright © 2022 Hideyuki Kojima.'
+use_directory_urls: false
+
+theme:
+  name: 'material'
+  language: 'ja'
+  logo: assets/images/logo.png
+  palette:
+    primary: 'light blue'
+    accent: 'orange'
+  font:
+    text: 'BIZ UDPGothic'
+    code: 'Consolas'
+  features:
+    - navigation.tabs
+    - navigation.top
+    - toc.integrate
+
+extra_css:
+  - assets/extra.css
+
+extra_javascript:
+  - assets/extra.js
+
+plugins:
+  - search:
+      lang: ja
+
+markdown_extensions:
+  - admonition
+  - footnotes
+  - codehilite:
+      linenums: true
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
