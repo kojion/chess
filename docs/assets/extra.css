@@ -1,0 +1,12 @@
+.md-typeset h1 {
+    font-size: 1.4em;
+}
+
+.md-typeset h2 {
+    font-size: 1.2em;
+}
+
+.md-typeset {
+    font-size: 0.7rem;
+    line-height: 1.8;
+}
