@@ -1,3 +1,7 @@
+.md-nav {
+    font-size: 0.6rem;
+}
+
 .md-typeset h1 {
     font-size: 1.6em;
     font-weight: bold;
@@ -6,6 +10,13 @@
 .md-typeset h2 {
     font-size: 1.4em;
     font-weight: bold;
+}
+
+.md-typeset p > code {
+    padding: 2px 8px;
+    color: #e83e8c;
+    background-color: #fafafa;
+    font-size: 1.0em;
 }
 
 .md-typeset {

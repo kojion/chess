@@ -15,7 +15,7 @@ theme:
     accent: 'orange'
   font:
     text: 'BIZ UDPGothic'
-    code: 'Consolas'
+    code: 'JetBrains Mono'
   features:
     - navigation.tabs
     - navigation.top
