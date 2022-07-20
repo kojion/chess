@@ -8,7 +8,8 @@ use_directory_urls: false
 theme:
   name: 'material'
   language: 'ja'
-  logo: assets/images/logo.png
+  logo: assets/logo.png
+  favicon: assets/favicon.png
   palette:
     primary: 'light blue'
     accent: 'orange'
@@ -29,6 +30,9 @@ extra_javascript:
 plugins:
   - search:
       lang: ja
+  - glightbox:
+      width: 50%
+      height: 50%
 
 markdown_extensions:
   - admonition
@@ -38,3 +42,5 @@ markdown_extensions:
   - def_list
   - pymdownx.tasklist:
       custom_checkbox: true
+  - attr_list
+  - md_in_html
