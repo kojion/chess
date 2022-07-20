@@ -13,6 +13,7 @@ nav:
     - mkdocs/002.md
     - mkdocs/003.md
     - mkdocs/004.md
+    - mkdocs/005.md
 
 # テーマ
 theme:
@@ -20,6 +21,7 @@ theme:
   language: 'ja'
   logo: assets/logo.png
   favicon: assets/favicon.png
+  custom_dir: overrides
   palette:
     primary: 'light blue'
     accent: 'orange'
@@ -29,6 +31,7 @@ theme:
   features:
     - navigation.tabs
     - navigation.top
+    - navigation.expand
     - toc.integrate
 
 # 拡張 CSS
