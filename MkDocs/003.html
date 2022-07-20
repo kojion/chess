@@ -7,10 +7,10 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="チェスの備忘録です。" name="description"/>
 <meta content="Hideyuki Kojima" name="author"/>
-<link href="https://kojion.github.io/chess/MkDocs/002.html" rel="canonical"/>
+<link href="https://kojion.github.io/chess/MkDocs/003.html" rel="canonical"/>
 <link href="../assets/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.3.0, mkdocs-material-8.2.15" name="generator"/>
-<title>環境構築 - コジオン: チェス</title>
+<title>動作確認 - コジオン: チェス</title>
 <link href="../assets/stylesheets/main.c382b1dc.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.cc9b2e1e.min.css" rel="stylesheet"/>
 <meta content="#02a6f2" name="theme-color"/>
@@ -49,7 +49,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              環境構築
+              動作確認
             
           </span>
 </div>
@@ -139,14 +139,19 @@
         はじめに
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="002.html">
+        環境構築
+      </a>
+</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-          環境構築
+          動作確認
           <span class="md-nav__icon md-icon"></span>
 </label>
-<a class="md-nav__link md-nav__link--active" href="002.html">
-        環境構築
+<a class="md-nav__link md-nav__link--active" href="003.html">
+        動作確認
       </a>
 <nav aria-label="目次" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
@@ -155,27 +160,27 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#pycharm">
-    PyCharm
+<a class="md-nav__link" href="#git-clone">
+    git clone からプロジェクト作成
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#mkdocs">
-    MkDocs
+<a class="md-nav__link" href="#_2">
+    ローカル環境での確認
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#github">
-    GitHub
+<a class="md-nav__link" href="#html">
+    HTML 生成
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#github-pages">
+    GitHub Pages へのデプロイ
   </a>
 </li>
 </ul>
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="003.html">
-        動作確認
-      </a>
 </li>
 </ul>
 </nav>
@@ -187,42 +192,72 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="_1">環境構築</h1>
-<p><a href="https://azure.microsoft.com/ja-jp/products/visual-studio-code/">Visual Studio Code</a>
-などの高機能なテキストエディタを使用しても十分な内容ではありますが、ここでは無料で使用できる上非常に高機能な Python IDE である
-<strong>PyCharm Community Edition</strong> を使用する形で紹介させていただきます。</p>
-<h2 id="pycharm">PyCharm</h2>
-<p><a class="glightbox" href="images/001.png"><img align="left" src="images/001.png" width="30%"/></a></p>
-<p><a href="https://www.jetbrains.com/ja-jp/pycharm/">PyCharm 公式サイト</a>にアクセスし Community Edition の最新版をダウンロードしてインストールします。
-Professional Edition では HTML や CSS, Python フレームワーク<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>のアシストなどの便利な機能を使用することができますが、今回は全く必要ありません<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>。
-デフォルトでは英語ですが、プラグインで日本語化して使用することができます。
-<strong>設定 -&gt; プラグイン -&gt; Japanese Language Pack / 日本語言語パック</strong>をインストールしてください。</p>
-<p>MkDocs は Python で駆動するため PyCharm を使用しない場合は Python 実行環境のバイナリをシステムにインストールする必要がありますが、
-PyCharm を使用すると<strong>設定 -&gt; プロジェクト -&gt; Python インタープリタ</strong>からインストールすることができます。
-こういった感じですべて PyCharm 上から完結するところが便利です。</p>
-<p>いろいろなテーマを利用することができますが、個人的に綺麗だと思うのは Read the Docs テーマと mkdocs-material テーマです。
-前者はインストールせずに利用することができますが、後者を利用する場合はやはりインストールする必要があります。
-<code>pip3 install mkdocs-material</code> を叩くか PyCharm の<strong>設定 -&gt; プロジェクト -&gt; Python インタープリタ</strong>からインストールしてください。</p>
-<h2 id="mkdocs">MkDocs</h2>
-<p>インストールした Python インタプリタ、若しくは <strong>venv</strong><sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup> に <code>mkdocs</code> パッケージをインストールします。
-コンソールから <code>pip3 install mkdocs</code> と叩いてもいいのですが PyCharm であれば<strong>設定 -&gt; プロジェクト -&gt; Python インタープリタ</strong>から簡単にインストールできます。</p>
-<h2 id="github">GitHub</h2>
-<p>MkDocs はこれだけでもご使用いただけますが Markdown を記述したファイルを管理したりビルドした HTML やアセットを Web サーバにデプロイするのが面倒です。
-MkDocs は GitHub と最高の相性を誇ります<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup>ので GitHub のアカウントを取得しリポジトリを生成しておきましょう。</p>
+<h1 id="_1">動作確認</h1>
+<p><a href="002.html">環境構築</a>でみてきた通り、以下を使用する前提で動作確認していきます:</p>
+<ol>
+<li>PyCharm Community Edition</li>
+<li>GitHub</li>
+</ol>
+<h2 id="git-clone">git clone からプロジェクト作成</h2>
+<p>ここでは仮に GitHub リポジトリ URL を <code>https://github.com/kojion/chess.git</code> としておきます。
+ローカルディレクトリの好きな場所で <code>git clone https://github.com/kojion/chess.git</code> を実行してください。
+PyCharm を使用している場合はユーザディレクトリ直下に <code>PyCharmProjects</code> ができているはずなので、そこに <code>cd</code> してから <code>git clone</code> されると良いでしょう。
+GitHub リポジトリにデフォルトで入っている <code>README.md</code> や <code>LICENSE</code><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> が落ちてきたはずです。
+そこで以下を実行します:</p>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>cd ../
+mkdocs new (clone したリポジトリ名)
+</code></pre></div></td></tr></table></div>
+<p>これで clone したリポジトリ名のディレクトリに対して MkDocs の初期ファイル<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>が生成されます。</p>
+<div class="admonition note">
+<p class="admonition-title">PyCharm のプロジェクト設定ファイル .idea について</p>
+<p>PyCharm でプロジェクトとして開いて操作している場合 <code>.idea</code> というディレクトリが自動生成されプロジェクトの設定ファイルが格納されます。
+しかしこれはソースコード上は不要なファイル群ですので <code>.gitignore</code> を用意して <code>.idea</code> を除外しておくことをお勧めします。</p>
+</div>
+<p>まずは動作確認を行いたいので、とりあえずこれで push してみましょう。
+PyCharm 上でディレクトリを右クリックして <strong>Git -&gt; ディレクトリのコミット</strong>を選択し、コミットとプッシュを選択します。
+push が成功したらそのようなメッセージが表示され GitHub のリポジトリサイトを見てみるとソースコードが上がっているはずです。</p>
+<h2 id="_2">ローカル環境での確認</h2>
+<p>まずこのままで動作確認をしてみましょう。
+ターミナルで <code>mkdocs serve</code> と叩いてください。
+そうすると成功時には以下のように表示されます:</p>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nv">PS</span> <span class="nv">C</span>:\<span class="nv">Users</span>\<span class="nv">kojion</span>\<span class="nv">PycharmProjects</span>\<span class="nv">chess</span><span class="o">&gt;</span> <span class="nv">mkdocs</span> <span class="nv">serve</span>
+<span class="nv">INFO</span>     <span class="o">-</span>  <span class="nv">Building</span> <span class="nv">documentation</span>...
+<span class="nv">INFO</span>     <span class="o">-</span>  <span class="nv">Cleaning</span> <span class="nv">site</span> <span class="nv">directory</span>
+<span class="nv">INFO</span>     <span class="o">-</span>  <span class="nv">Documentation</span> <span class="nv">built</span> <span class="nv">in</span> <span class="mi">0</span>.<span class="mi">56</span> <span class="nv">seconds</span>
+<span class="nv">INFO</span>     <span class="o">-</span>  [<span class="mi">16</span>:<span class="mi">20</span>:<span class="mi">54</span>] <span class="nv">Watching</span> <span class="nv">paths</span> <span class="k">for</span> <span class="nv">changes</span>: <span class="s1">'</span><span class="s">docs</span><span class="s1">'</span>, <span class="s1">'</span><span class="s">mkdocs.yml</span><span class="s1">'</span>
+<span class="nv">INFO</span>     <span class="o">-</span>  [<span class="mi">16</span>:<span class="mi">20</span>:<span class="mi">54</span>] <span class="nv">Serving</span> <span class="nv">on</span> <span class="nv">http</span>:<span class="o">//</span><span class="mi">127</span>.<span class="mi">0</span>.<span class="mi">0</span>.<span class="mi">1</span>:<span class="mi">8000</span><span class="o">/</span><span class="nv">chess</span><span class="o">/</span>
+</code></pre></div></td></tr></table></div>
+<p>表示された内容に従い <code>http://127.0.0.1:8000/chess/</code> にアクセスしてみてください<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>。
+初期状態は割と味気ない感じの画面ですが、確かに <code>docs/index.md</code> から生成されたであろう Web サイトが表示されるはずです。
+この <code>mkdocs serve</code> はいわゆる<strong>ホットデプロイ</strong>となっておりますので、そのまま <code>index.md</code> を適当に書き換えてみてください。
+変更した Markdown ソースが即座に Web サイトに反映されて表示が確認できます。
+MkDocs はこれがとても便利です。</p>
+<h2 id="html">HTML 生成</h2>
+<div class="admonition tip">
+<p class="admonition-title">GitHub にデプロイする場合は必要ない作業</p>
+<p>後述する GitHub Pages にデプロイする場合はこちら側で HTML ファイルを生成する必要はありませんが、レンタルサーバなどに配置することを踏まえて念のため触れておきます。</p>
+</div>
+<p><code>mkdocs build</code> を叩くことで <code>site</code> ディレクトリが生成され、そこに <code>mkdocs serve</code> でみてきた Web サイト相当の HTML ファイルが生成されます。
+レンタルサーバなどに配置する際は、この <code>site</code> ディレクトリ以下を FTP ないし SCP でコピーするか、若しくはサーバ側で適宜
+<code>git pull</code> して得たソースコード内の <code>site</code> を <code>DocumentRoot</code> として設定するとよいでしょう。</p>
+<h2 id="github-pages">GitHub Pages へのデプロイ</h2>
 <div class="footnote">
 <hr/>
 <ol>
 <li id="fn:1">
-<p>Django, Flask などの Web アプリケーション・フレームワーク <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+<p>リポジトリ作成時にライセンスを選択すると生成される <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
 </li>
 <li id="fn:2">
-<p>デザインを調整するための CSS や JavaScript を書く時だけは欲しくなりますが、他では不要です <a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">↩</a></p>
+<p><code>mkdocs.yml</code> と <code>docs/index.md</code> <a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">↩</a></p>
 </li>
 <li id="fn:3">
-<p>venv は Python 仮想実行環境です。Python インタプリタ側に直接パッケージをインストールするとそれが全体的に有効になってしまうため、環境をプロジェクト毎に分けたい場合に使用します <a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">↩</a></p>
-</li>
-<li id="fn:4">
-<p><code>mkdocs gh-deploy</code> という GitHub Pages にデプロイする専用のコマンドが用意されており、一発で公開できて大変便利です <a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">↩</a></p>
+<p>PyCharm のターミナル上であればリンクになっているのでクリックするだけです <a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">↩</a></p>
 </li>
 </ol>
 </div>
@@ -236,7 +271,7 @@ MkDocs は GitHub と最高の相性を誇ります<sup id="fnref:4"><a class="f
 </main>
 <footer class="md-footer">
 <nav aria-label="フッター" class="md-footer__inner md-grid">
-<a aria-label="前: はじめに" class="md-footer__link md-footer__link--prev" href="001.html" rel="prev">
+<a aria-label="前: 環境構築" class="md-footer__link md-footer__link--prev" href="002.html" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -245,21 +280,8 @@ MkDocs は GitHub と最高の相性を誇ります<sup id="fnref:4"><a class="f
 <span class="md-footer__direction">
                 前
               </span>
-              はじめに
+              環境構築
             </div>
-</div>
-</a>
-<a aria-label="次: 動作確認" class="md-footer__link md-footer__link--next" href="003.html" rel="next">
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                次
-              </span>
-              動作確認
-            </div>
-</div>
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
 </div>
 </a>
 </nav>

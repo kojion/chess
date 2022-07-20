@@ -15,8 +15,8 @@
 <link href="../assets/stylesheets/palette.cc9b2e1e.min.css" rel="stylesheet"/>
 <meta content="#02a6f2" name="theme-color"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css?family=BIZ+UDPGothic:300,300i,400,400i,700,700i%7CConsolas:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
-<style>:root{--md-text-font:"BIZ UDPGothic";--md-code-font:"Consolas"}</style>
+<link href="https://fonts.googleapis.com/css?family=BIZ+UDPGothic:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"BIZ UDPGothic";--md-code-font:"JetBrains Mono"}</style>
 <link href="../assets/extra.css" rel="stylesheet"/>
 <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>html.glightbox-open { overflow: initial; height: 100%; }</style><script src="../assets/javascripts/glightbox.min.js"></script></head>
@@ -145,6 +145,11 @@
         環境構築
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="003.html">
+        動作確認
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -172,6 +177,14 @@ IT エンジニア向けの内容になってしまうとは思いますが、�
 <p>MkDocs は Python で動きますが Python の知識は必要ありません。
 コマンドラインから多少のコマンドを叩くことができれば使用することができます。
 このサイトが行っているように GitHub を使用すると Markdown ファイルのバージョン管理やデプロイが簡単にできるようになるためお勧めですが、その場合多少の Git (GitHub) の知識が必要となります。</p>
+<div class="admonition question">
+<p class="admonition-title">Markdown とは何でしょうか？</p>
+<p><strong>Markdown</strong> とは文書を記述するための軽量マークアップ言語のひとつです。
+Web サイトであれば通常は HTML で記述することになりますが、入れ子になる HTML タグより Markdown で記述したほうが遥かに簡潔なソースとなります。
+また Markdown はパーサに解釈されていないソースを人間が直接読んだ時も読みやすいのが特徴です。
+以前は Sphinx を使用して <strong>reStructuredText</strong> で書くのが普通でしたが、Markdown 記法が出てきてからはあまりの書きやすさに Markdown がデファクト・スタンダードの扱いとなりました。</p>
+<p>尚 lichess のブログ機能でも Markdown 記法をサポートしており、簡単に文章を装飾させて書くことができます。</p>
+</div>
 </article>
 </div>
 </div>
