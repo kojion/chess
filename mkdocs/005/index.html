@@ -7,10 +7,10 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="チェスの備忘録です。" name="description"/>
 <meta content="Hideyuki Kojima" name="author"/>
-<link href="https://kojion.github.io/chess/mkdocs/004/" rel="canonical"/>
+<link href="https://kojion.github.io/chess/mkdocs/005/" rel="canonical"/>
 <link href="../../assets/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.3.0, mkdocs-material-8.2.15" name="generator"/>
-<title>mkdocs.yml 設定 - コジオン: チェス</title>
+<title>Giscus - コジオン: チェス</title>
 <link href="../../assets/stylesheets/main.c382b1dc.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.cc9b2e1e.min.css" rel="stylesheet"/>
 <meta content="#02a6f2" name="theme-color"/>
@@ -25,7 +25,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#mkdocsyml">
+<a class="md-skip" href="#giscus">
           コンテンツにスキップ
         </a>
 </div>
@@ -49,7 +49,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              mkdocs.yml 設定
+              Giscus
             
           </span>
 </div>
@@ -149,14 +149,19 @@
         動作確認
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../004/">
+        mkdocs.yml 設定
+      </a>
+</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-          mkdocs.yml 設定
+          Giscus
           <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        mkdocs.yml 設定
+        Giscus
       </a>
 <nav aria-label="目次" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
@@ -165,37 +170,17 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#nav">
-    nav
+<a class="md-nav__link" href="#_1">
+    コメントシステム
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#theme">
-    theme
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#extra_cssextra_javascript">
-    extra_css,extra_javascript
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#plugin">
-    plugin
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#markdown_extensions">
-    markdown_extensions
+<a class="md-nav__link" href="#_2">
+    導入
   </a>
 </li>
 </ul>
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../005/">
-        Giscus
-      </a>
 </li>
 </ul>
 </nav>
@@ -207,142 +192,94 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="mkdocsyml">mkdocs.yml 設定</h1>
-<p><code>mkdocs.yml</code> で設定を変更することでさまざまな機能を付加して便利に使用することができます。
-個人的にこれはと思った設定項目を紹介します。</p>
-<div class="admonition attention">
-<p class="admonition-title">Material テーマ前提とします</p>
-<p>紹介するものの中には Material テーマ以外で対応していないものもあるかもしれませんので注意願います。</p>
-</div>
-<h2 id="nav">nav</h2>
-<p><code>nav</code> を設定していない場合 MkDocs は自動的に <code>docs</code> 以下の <code>.md</code> ファイルを探索して自動的にインデックスを構成します。
-しかしこれだと意図しない並びや名前になったりすることがあると思います。
-その場合 <code>nav</code> で定義することにより自分でリンク名や並び順を決めることができます。
-追加する度に記述するのが多少面倒ですが、致し方ないかなと思います。</p>
-<div class="codehilite"><pre><span></span><code>nav:
-  - index.md
-  - MkDocs:
-    - mkdocs/001.md  # この記述の場合対象ドキュメントの &lt;h1&gt; が自動的に使用される
-    - ほげふが: mkdocs/002.md  # 題名「ほげふが」を明示的に指定する
-</code></pre></div>
-<h2 id="theme">theme</h2>
-<p>テーマを設定します。
-ロゴや favicon, 更に Material テーマだと色やフォント、タブなども設定できて便利です。
-このあたりは<a href="https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/">公式ドキュメント</a>にいろいろ書いてありますので、一通り見てみるのが良いでしょう。</p>
-<p>この中で注意すべきなのが <code>features:</code> の部分です:</p>
-<dl>
-<dt>navigation.tabs</dt>
-<dd>トップレベル階層をタブとして表示します。好みによるかと思いますが、カテゴリがタブとして明確に表示されるので悪くないと思います。</dd>
-<dt>navigation.top</dt>
-<dd>下にスクロールして上に戻る時に画面トップに戻るためのボタンが表示されます。ちょっと便利です。</dd>
-<dt>toc.integrate</dt>
-<dd>通常は左にページ一覧、右に目次が表示され、中央にコンテンツが表示されて領域が狭いのですが、この設定を付与すると左にページ一覧と目次が合体して表示されます。
-個人的にはこの方が見やすい気がします。</dd>
-</dl>
-<p><a href="https://dev.classmethod.jp/articles/material-for-mkdocs-customization-about-navigation/">クラスメソッド様の記事</a>が大変参考になりました。
-私は最終的に以下のような設定に落ち着きました:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">theme</span><span class="o">:</span><span class="w"></span>
-<span class="w">  </span><span class="n">name</span><span class="o">:</span><span class="w"> </span><span class="s1">'material'</span><span class="w"></span>
-<span class="w">  </span><span class="n">language</span><span class="o">:</span><span class="w"> </span><span class="s1">'ja'</span><span class="w"></span>
-<span class="w">  </span><span class="n">logo</span><span class="o">:</span><span class="w"> </span><span class="n">assets</span><span class="o">/</span><span class="n">logo</span><span class="o">.</span><span class="na">png</span><span class="w"></span>
-<span class="w">  </span><span class="n">favicon</span><span class="o">:</span><span class="w"> </span><span class="n">assets</span><span class="o">/</span><span class="n">favicon</span><span class="o">.</span><span class="na">png</span><span class="w"></span>
-<span class="w">  </span><span class="n">palette</span><span class="o">:</span><span class="w"></span>
-<span class="w">    </span><span class="n">primary</span><span class="o">:</span><span class="w"> </span><span class="s1">'light blue'</span><span class="w"></span>
-<span class="w">    </span><span class="n">accent</span><span class="o">:</span><span class="w"> </span><span class="s1">'orange'</span><span class="w"></span>
-<span class="w">  </span><span class="n">font</span><span class="o">:</span><span class="w"></span>
-<span class="w">    </span><span class="n">text</span><span class="o">:</span><span class="w"> </span><span class="s1">'BIZ UDPGothic'</span><span class="w"></span>
-<span class="w">    </span><span class="n">code</span><span class="o">:</span><span class="w"> </span><span class="s1">'JetBrains Mono'</span><span class="w"></span>
-<span class="w">  </span><span class="n">features</span><span class="o">:</span><span class="w"></span>
-<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">navigation</span><span class="o">.</span><span class="na">tabs</span><span class="w"></span>
-<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">navigation</span><span class="o">.</span><span class="na">top</span><span class="w"></span>
-<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">toc</span><span class="o">.</span><span class="na">integrate</span><span class="w"></span>
-</code></pre></div>
-<h2 id="extra_cssextra_javascript">extra_css,extra_javascript</h2>
-<p>見た目や挙動をカスタマイズするために別途 CSS や JavaScript ファイルを追加することができます。
-例えば以下のように指定して対象ディレクトリにファイルを配置します:</p>
-<div class="codehilite"><pre><span></span><code># 拡張 CSS
-extra_css:
-  - assets/extra.css
-
-# 拡張 JavaScript
-extra_javascript:
-  - assets/extra.js
-</code></pre></div>
-<h2 id="plugin">plugin</h2>
-<p>使用するプラグインを指定します。
-Material テーマでは日本語での検索ができるのですが、それを使用するためにここで以下のように指定します:</p>
-<div class="codehilite"><pre><span></span><code>plugins:
-  - search:
-      lang: ja
-</code></pre></div>
-<h2 id="markdown_extensions">markdown_extensions</h2>
-<p>その他 Markdown 拡張記法の追加を行い便利に利用できるようにします。
-概要だけ書きます。</p>
-<dl>
-<dt>admonition</dt>
-<dd>メモ、ヒント、警告などを目立つように表示してくれる拡張機能です。見た目が良いのでおすすめです。</dd>
-</dl>
-<div class="codehilite"><pre><span></span><code>!!! Note "Admonition テスト"
-
-    こんな感じです。
-</code></pre></div>
-<p>こう書くと以下のように表示されます:</p>
+<h1 id="giscus">Giscus</h1>
+<h2 id="_1">コメントシステム</h2>
+<p>MkDocs のような最終的に HTML で表示する静的サイトの場合、以前までは記事に対するコメントを付与するといったような動的な要素を追加するのは難しいと考えていました。
+しかし Material テーマであれば <strong>Giscus</strong> という GitHub Discussions を使用してコメントを残せる仕組みが用意されています。
+今回こちらを試してみることにします。</p>
 <div class="admonition note">
-<p class="admonition-title">Admonition テスト</p>
-<p>こんな感じです。</p>
+<p class="admonition-title">以前 Disqus があった気がする</p>
+<p>以前はクラウド型コメントシステムとして <strong>Disqus</strong> を使用するという記載があったように思いましたが、最近見てみると Giscus に置き換わっていました。
+そちらも使えるのだと思われますが、ここでは検証しません。</p>
 </div>
+<h2 id="_2">導入</h2>
+<p><a href="https://squidfunk.github.io/mkdocs-material/setup/adding-a-comment-system/">公式サイト: Adding a comment system</a> の通り実施してみることにします。</p>
 <dl>
-<dt>footnotes</dt>
-<dd>注釈を書いて文末にまとめることができます。独特な感じです<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>。</dd>
-<dt>codehilite</dt>
-<dd>コードブロックをハイライト表示してくれます。</dd>
+<dt>Giscus インストール</dt>
+<dd><a href="https://github.com/apps/giscus">Giscus App</a> のサイトから GitHub アプリとして Giscus をインストールします。</dd>
+<dt>GitHub Discussions を有効にする</dt>
+<dd><a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/enabling-or-disabling-github-discussions-for-a-repository">Enabling or disabling GitHub Discussions for your repository</a> の通り対象リポジトリで GitHub Discussions を有効にします。</dd>
+<dt>スニペット生成</dt>
+<dd><a href="https://giscus.app/ja">Giscus サイト</a>にアクセスし、設問に答えていって <code>&lt;script&gt;</code> スニペットを生成します。</dd>
 </dl>
-<div class="codehilite"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="p">...</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"こんな感じです"</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">"https://giscus.app/client.js"</span>
+        <span class="na">data-repo=</span><span class="s">"kojion/chess"</span>
+        <span class="na">data-repo-id=</span><span class="s">"R_kgDOHr3XSw"</span>
+        <span class="na">data-category=</span><span class="s">"Announcements"</span>
+        <span class="na">data-category-id=</span><span class="s">"DIC_kwDOHr3XS84CQVzN"</span>
+        <span class="na">data-mapping=</span><span class="s">"pathname"</span>
+        <span class="na">data-reactions-enabled=</span><span class="s">"1"</span>
+        <span class="na">data-emit-metadata=</span><span class="s">"1"</span>
+        <span class="na">data-input-position=</span><span class="s">"top"</span>
+        <span class="na">data-theme=</span><span class="s">"light"</span>
+        <span class="na">data-lang=</span><span class="s">"ja"</span>
+        <span class="na">data-loading=</span><span class="s">"lazy"</span>
+        <span class="na">crossorigin=</span><span class="s">"anonymous"</span>
+        <span class="err">async</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/script&gt;</span>
 </code></pre></div>
 <dl>
-<dt>def_list</dt>
-<dd>定義リスト、要は <code>&lt;dl&gt;&lt;dt&gt;&lt;dd&gt;</code> 構造を使用して定義を列挙することができます。
-まさにここの項目で使用している通りです。</dd>
-<dt>pymdownx.tasklist</dt>
-<dd>タスクリストを定義することができます。タスク管理を行う場合に便利なのではないかと思います。</dd>
+<dt>拡張テーマ用意</dt>
+<dd><code>mkdocs.yml</code> に拡張テーマを格納するための設定及びディレクトリを用意します。</dd>
 </dl>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> やっていないこと</li>
-<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> やったこと<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> 入れ子 </li>
-<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> 入れ子 2</li>
-</ul>
-</li>
-</ul>
-<dl>
-<dt>attr_list</dt>
-<dd>Markdown に対して属性を追加することが出来ます。例えば <code>![image](image.png){: .center}</code>
-のような記法をすることで生成される <code>&lt;img&gt;</code> タグに <code>class="center"</code> 属性を付加することができます。</dd>
-<dt>md_in_list</dt>
-<dd>HTML 記法の中でも Markdown を利用できるようになるとのことです。</dd>
-</dl>
-<p>結果的に以下のような指定に落ち着きました:</p>
-<div class="codehilite"><pre><span></span><code>markdown_extensions:
-- admonition
-- footnotes
-- codehilite
-- def_list
-- pymdownx.tasklist:
-  custom_checkbox: true
-- attr_list
-- md_in_html
+<div class="codehilite"><pre><span></span><code><span class="n">theme</span><span class="o">:</span><span class="w"></span>
+<span class="w">  </span><span class="n">custom_dir</span><span class="o">:</span><span class="w"> </span><span class="n">overrides</span><span class="w"></span>
 </code></pre></div>
-<p>尚、このサイトで最終的に使用している指定は <a href="https://github.com/kojion/chess/blob/main/mkdocs.yml">GitHub のリポジトリ</a>から参照できますので、参考になるかと思います。</p>
-<div class="footnote">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>ここが注釈の概要です <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
-</li>
-</ol>
-</div>
+<dl>
+<dt>スニペット配置</dt>
+<dd><code>overrides/main.html</code> を用意し、以下の部分に先ほど生成したスニペットをペーストします:</dd>
+</dl>
+<div class="codehilite"><pre><span></span><code><span class="cp">{%</span> <span class="k">extends</span> <span class="s2">"base.html"</span> <span class="cp">%}</span>
+
+<span class="cp">{%</span> <span class="k">block</span> <span class="nv">content</span> <span class="cp">%}</span>
+  <span class="cp">{{</span> <span class="nb">super</span><span class="o">()</span> <span class="cp">}}</span>
+
+  <span class="cm">&lt;!-- Giscus --&gt;</span>
+  <span class="nt">&lt;h2</span> <span class="na">id=</span><span class="s">"__comments"</span><span class="nt">&gt;</span><span class="cp">{{</span> <span class="nv">lang.t</span><span class="o">(</span><span class="s2">"meta.comments"</span><span class="o">)</span> <span class="cp">}}</span><span class="nt">&lt;/h2&gt;</span>
+  <span class="cm">&lt;!-- Replace with generated snippet --&gt;</span>
+
+  <span class="cm">&lt;!-- Synchronize Giscus theme with palette --&gt;</span>
+  <span class="nt">&lt;script&gt;</span>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    /* Set palette on initial load */
+    var palette = __md_get("__palette")
+    if (palette <span class="err">&amp;&amp;</span> typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate" ? "dark" : "light"
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette <span class="err">&amp;&amp;</span> typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+          /* Instruct Giscus to change theme */
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  <span class="nt">&lt;/script&gt;</span>
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span>
+</code></pre></div>
+<p>これでアクセスしてみると動きました。</p>
 <!-- Giscus -->
 <h2 id="__comments">コメント</h2>
 <script async="" crossorigin="anonymous" data-category="Announcements" data-category-id="DIC_kwDOHr3XS84CQVzN" data-emit-metadata="1" data-input-position="top" data-lang="ja" data-loading="lazy" data-mapping="pathname" data-reactions-enabled="1" data-repo="kojion/chess" data-repo-id="R_kgDOHr3XSw" data-theme="light" src="https://giscus.app/client.js">
@@ -386,7 +323,7 @@ Material テーマでは日本語での検索ができるのですが、それ�
 </main>
 <footer class="md-footer">
 <nav aria-label="フッター" class="md-footer__inner md-grid">
-<a aria-label="前: 動作確認" class="md-footer__link md-footer__link--prev" href="../003/" rel="prev">
+<a aria-label="前: mkdocs.yml 設定" class="md-footer__link md-footer__link--prev" href="../004/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -395,21 +332,8 @@ Material テーマでは日本語での検索ができるのですが、それ�
 <span class="md-footer__direction">
                 前
               </span>
-              動作確認
+              mkdocs.yml 設定
             </div>
-</div>
-</a>
-<a aria-label="次: Giscus" class="md-footer__link md-footer__link--next" href="../005/" rel="next">
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                次
-              </span>
-              Giscus
-            </div>
-</div>
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
 </div>
 </a>
 </nav>
