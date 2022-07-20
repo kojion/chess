@@ -136,9 +136,31 @@
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          はじめに
+          <span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
         はじめに
       </a>
+<nav aria-label="目次" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mkdocs">
+    MkDocs を使う意味
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    参考文献
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../002/">
@@ -161,6 +183,7 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="_1">はじめに</h1>
+<h2 id="mkdocs">MkDocs を使う意味</h2>
 <p>チェスに関する内容をインターネットで公開する場合 Twitter などの SNS を使用したり
 YouTube などで動画を公開するなどの手法もありますが、旧来のブログ形式のほうが優れている点もいくつかあります:</p>
 <ol>
@@ -185,6 +208,30 @@ Web サイトであれば通常は HTML で記述することになりますが�
 以前は Sphinx を使用して <strong>reStructuredText</strong> で書くのが普通でしたが、Markdown 記法が出てきてからはあまりの書きやすさに Markdown がデファクト・スタンダードの扱いとなりました。</p>
 <p>尚 lichess のブログ機能でも Markdown 記法をサポートしており、簡単に文章を装飾させて書くことができます。</p>
 </div>
+<h2 id="_2">参考文献</h2>
+<p>以下のサイトが参考になるかと思います:</p>
+<table>
+<thead>
+<tr>
+<th align="left">サイト</th>
+<th align="left">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a href="https://www.mkdocs.org/">MkDocs 公式 (英語)</a></td>
+<td align="left">公式サイトなので 1 回は見たいところです</td>
+</tr>
+<tr>
+<td align="left"><a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs (英語)</a></td>
+<td align="left">Material テーマのドキュメント。いろいろな機能が使えるのでお勧めです</td>
+</tr>
+<tr>
+<td align="left"><a href="https://zenn.dev/mebiusbox/articles/81d977a72cee01">MkDocsによるドキュメント作成</a></td>
+<td align="left">日本語の詳細なリファレンスなので目を通してみましょう</td>
+</tr>
+</tbody>
+</table>
 </article>
 </div>
 </div>
