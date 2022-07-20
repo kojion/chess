@@ -1,0 +1,389 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="チェスの備忘録です。" name="description"/>
+<meta content="Hideyuki Kojima" name="author"/>
+<link href="https://kojion.github.io/chess/mkdocs/004/" rel="canonical"/>
+<link href="../../assets/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.3.0, mkdocs-material-8.2.15" name="generator"/>
+<title>mkdocs.yml 設定 - コジオン: チェス</title>
+<link href="../../assets/stylesheets/main.c382b1dc.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.cc9b2e1e.min.css" rel="stylesheet"/>
+<meta content="#02a6f2" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=BIZ+UDPGothic:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"BIZ UDPGothic";--md-code-font:"JetBrains Mono"}</style>
+<link href="../../assets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>html.glightbox-open { overflow: initial; height: 100%; }</style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="orange" data-md-color-primary="light-blue" data-md-color-scheme="" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#mkdocsyml">
+          コンテンツにスキップ
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="ヘッダー" class="md-header__inner md-grid">
+<a aria-label="コジオン: チェス" class="md-header__button md-logo" data-md-component="logo" href="../.." title="コジオン: チェス">
+<img alt="logo" src="../../assets/logo.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            コジオン: チェス
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              mkdocs.yml 設定
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="検索" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="検索" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="クリア" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            検索を初期化
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="タブ" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+      ホーム
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../001/">
+        MkDocs
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="ナビゲーション" class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="コジオン: チェス" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="コジオン: チェス">
+<img alt="logo" src="../../assets/logo.png"/>
+</a>
+    コジオン: チェス
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        ホーム
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+          MkDocs
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="MkDocs" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          MkDocs
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../001/">
+        はじめに
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../002/">
+        環境構築
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../003/">
+        動作確認
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          mkdocs.yml 設定
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        mkdocs.yml 設定
+      </a>
+<nav aria-label="目次" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nav">
+    nav
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#theme">
+    theme
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extra_cssextra_javascript">
+    extra_css,extra_javascript
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#plugin">
+    plugin
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#markdown_extensions">
+    markdown_extensions
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="mkdocsyml">mkdocs.yml 設定</h1>
+<p><code>mkdocs.yml</code> で設定を変更することでさまざまな機能を付加して便利に使用することができます。
+個人的にこれはと思った設定項目を紹介します。</p>
+<div class="admonition attention">
+<p class="admonition-title">Material テーマ前提とします</p>
+<p>紹介するものの中には Material テーマ以外で対応していないものもあるかもしれませんので注意願います。</p>
+</div>
+<h2 id="nav">nav</h2>
+<p><code>nav</code> を設定していない場合 MkDocs は自動的に <code>docs</code> 以下の <code>.md</code> ファイルを探索して自動的にインデックスを構成します。
+しかしこれだと意図しない並びや名前になったりすることがあると思います。
+その場合 <code>nav</code> で定義することにより自分でリンク名や並び順を決めることができます。
+追加する度に記述するのが多少面倒ですが、致し方ないかなと思います。</p>
+<div class="codehilite"><pre><span></span><code>nav:
+  - index.md
+  - MkDocs:
+    - mkdocs/001.md  # この記述の場合対象ドキュメントの &lt;h1&gt; が自動的に使用される
+    - ほげふが: mkdocs/002.md  # 題名「ほげふが」を明示的に指定する
+</code></pre></div>
+<h2 id="theme">theme</h2>
+<p>テーマを設定します。
+ロゴや favicon, 更に Material テーマだと色やフォント、タブなども設定できて便利です。
+このあたりは<a href="https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/">公式ドキュメント</a>にいろいろ書いてありますので、一通り見てみるのが良いでしょう。</p>
+<p>この中で注意すべきなのが <code>features:</code> の部分です:</p>
+<dl>
+<dt>navigation.tabs</dt>
+<dd>トップレベル階層をタブとして表示します。好みによるかと思いますが、カテゴリがタブとして明確に表示されるので悪くないと思います。</dd>
+<dt>navigation.top</dt>
+<dd>下にスクロールして上に戻る時に画面トップに戻るためのボタンが表示されます。ちょっと便利です。</dd>
+<dt>toc.integrate</dt>
+<dd>通常は左にページ一覧、右に目次が表示され、中央にコンテンツが表示されて領域が狭いのですが、この設定を付与すると左にページ一覧と目次が合体して表示されます。
+個人的にはこの方が見やすい気がします。</dd>
+</dl>
+<p><a href="https://dev.classmethod.jp/articles/material-for-mkdocs-customization-about-navigation/">クラスメソッド様の記事</a>が大変参考になりました。
+私は最終的に以下のような設定に落ち着きました:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">theme</span><span class="o">:</span><span class="w"></span>
+<span class="w">  </span><span class="n">name</span><span class="o">:</span><span class="w"> </span><span class="s1">'material'</span><span class="w"></span>
+<span class="w">  </span><span class="n">language</span><span class="o">:</span><span class="w"> </span><span class="s1">'ja'</span><span class="w"></span>
+<span class="w">  </span><span class="n">logo</span><span class="o">:</span><span class="w"> </span><span class="n">assets</span><span class="o">/</span><span class="n">logo</span><span class="o">.</span><span class="na">png</span><span class="w"></span>
+<span class="w">  </span><span class="n">favicon</span><span class="o">:</span><span class="w"> </span><span class="n">assets</span><span class="o">/</span><span class="n">favicon</span><span class="o">.</span><span class="na">png</span><span class="w"></span>
+<span class="w">  </span><span class="n">palette</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">primary</span><span class="o">:</span><span class="w"> </span><span class="s1">'light blue'</span><span class="w"></span>
+<span class="w">    </span><span class="n">accent</span><span class="o">:</span><span class="w"> </span><span class="s1">'orange'</span><span class="w"></span>
+<span class="w">  </span><span class="n">font</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">text</span><span class="o">:</span><span class="w"> </span><span class="s1">'BIZ UDPGothic'</span><span class="w"></span>
+<span class="w">    </span><span class="n">code</span><span class="o">:</span><span class="w"> </span><span class="s1">'JetBrains Mono'</span><span class="w"></span>
+<span class="w">  </span><span class="n">features</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">navigation</span><span class="o">.</span><span class="na">tabs</span><span class="w"></span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">navigation</span><span class="o">.</span><span class="na">top</span><span class="w"></span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">toc</span><span class="o">.</span><span class="na">integrate</span><span class="w"></span>
+</code></pre></div>
+<h2 id="extra_cssextra_javascript">extra_css,extra_javascript</h2>
+<p>見た目や挙動をカスタマイズするために別途 CSS や JavaScript ファイルを追加することができます。
+例えば以下のように指定して対象ディレクトリにファイルを配置します:</p>
+<div class="codehilite"><pre><span></span><code># 拡張 CSS
+extra_css:
+  - assets/extra.css
+
+# 拡張 JavaScript
+extra_javascript:
+  - assets/extra.js
+</code></pre></div>
+<h2 id="plugin">plugin</h2>
+<p>使用するプラグインを指定します。
+Material テーマでは日本語での検索ができるのですが、それを使用するためにここで以下のように指定します:</p>
+<div class="codehilite"><pre><span></span><code>plugins:
+  - search:
+      lang: ja
+</code></pre></div>
+<h2 id="markdown_extensions">markdown_extensions</h2>
+<p>その他 Markdown 拡張記法の追加を行い便利に利用できるようにします。
+概要だけ書きます。</p>
+<dl>
+<dt>admonition</dt>
+<dd>メモ、ヒント、警告などを目立つように表示してくれる拡張機能です。見た目が良いのでおすすめです。</dd>
+</dl>
+<div class="codehilite"><pre><span></span><code>!!! Note "Admonition テスト"
+
+    こんな感じです。
+</code></pre></div>
+<p>こう書くと以下のように表示されます:</p>
+<div class="admonition note">
+<p class="admonition-title">Admonition テスト</p>
+<p>こんな感じです。</p>
+</div>
+<dl>
+<dt>footnotes</dt>
+<dd>注釈を書いて文末にまとめることができます。独特な感じです<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>。</dd>
+<dt>codehilite</dt>
+<dd>コードブロックをハイライト表示してくれます。</dd>
+</dl>
+<div class="codehilite"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="p">...</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"こんな感じです"</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<dl>
+<dt>def_list</dt>
+<dd>定義リスト、要は <code>&lt;dl&gt;&lt;dt&gt;&lt;dd&gt;</code> 構造を使用して定義を列挙することができます。
+まさにここの項目で使用している通りです。</dd>
+<dt>pymdownx.tasklist</dt>
+<dd>タスクリストを定義することができます。タスク管理を行う場合に便利なのではないかと思います。</dd>
+</dl>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> やっていないこと</li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> やったこと<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> 入れ子 </li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> 入れ子 2</li>
+</ul>
+</li>
+</ul>
+<dl>
+<dt>attr_list</dt>
+<dd>Markdown に対して属性を追加することが出来ます。例えば <code>![image](image.png){: .center}</code>
+のような記法をすることで生成される <code>&lt;img&gt;</code> タグに <code>class="center"</code> 属性を付加することができます。</dd>
+<dt>md_in_list</dt>
+<dd>HTML 記法の中でも Markdown を利用できるようになるとのことです。</dd>
+</dl>
+<p>結果的に以下のような指定に落ち着きました:</p>
+<div class="codehilite"><pre><span></span><code>markdown_extensions:
+- admonition
+- footnotes
+- codehilite
+- def_list
+- pymdownx.tasklist:
+  custom_checkbox: true
+- attr_list
+- md_in_html
+</code></pre></div>
+<p>尚、このサイトで最終的に使用している指定は <a href="https://github.com/kojion/chess/blob/main/mkdocs.yml">GitHub のリポジトリ</a>から参照できますので、参考になるかと思います。</p>
+<div class="footnote">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>ここが注釈の概要です <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+</ol>
+</div>
+</article>
+</div>
+</div>
+<a class="md-top md-icon" data-md-component="top" data-md-state="hidden" href="#">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+            Back to top
+          </a>
+</main>
+<footer class="md-footer">
+<nav aria-label="フッター" class="md-footer__inner md-grid">
+<a aria-label="前: 動作確認" class="md-footer__link md-footer__link--prev" href="../003/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                前
+              </span>
+              動作確認
+            </div>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2022 Hideyuki Kojima.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "toc.integrate"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version.title": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.a6c66575.min.js"></script>
+<script src="../../assets/extra.js"></script>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "width": "100%", "height": "auto", "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
+</html>

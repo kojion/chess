@@ -27,3 +27,15 @@
 table.codehilitetable td.code span {
     font-size: 1.15em;
 }
+
+/** 定義リスト */
+dt {
+  font-size: 1.15em;
+  font-weight: bold;
+  font-family: monospace, serif;
+  color: #996666;
+}
+
+dd {
+  font-size: 0.9em;
+}
