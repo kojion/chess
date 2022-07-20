@@ -1,9 +1,19 @@
+# 基本情報
 site_name: 'コジオン: チェス'
 site_description: 'チェスの備忘録です。'
 site_author: 'Hideyuki Kojima'
 site_url: 'https://kojion.github.io/chess/'
 copyright: 'Copyright © 2022 Hideyuki Kojima.'
 
+# ナビゲーション
+nav:
+  - index.md
+  - MkDocs:
+    - mkdocs/001.md
+    - mkdocs/002.md
+    - mkdocs/003.md
+
+# テーマ
 theme:
   name: 'material'
   language: 'ja'
@@ -20,17 +30,21 @@ theme:
     - navigation.top
     - toc.integrate
 
+# 拡張 CSS
 extra_css:
   - assets/extra.css
 
+# 拡張 JavaScript
 extra_javascript:
   - assets/extra.js
 
+# プラグイン
 plugins:
   - search:
       lang: ja
   - glightbox
 
+# マークダウン拡張
 markdown_extensions:
   - admonition
   - footnotes
