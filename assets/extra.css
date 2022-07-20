@@ -1,22 +1,27 @@
+/** ナビゲーション */
 .md-nav {
     font-size: 0.6rem;
 }
 
+/** 全体 */
 .md-typeset {
     font-size: 0.7rem;
     line-height: 1.8;
 }
 
+/** h1 */
 .md-typeset h1 {
     font-size: 1.6em;
     font-weight: bold;
 }
 
+/** h2 */
 .md-typeset h2 {
     font-size: 1.4em;
     font-weight: bold;
 }
 
+/** インラインコード */
 .md-typeset p > code {
     padding: 2px 8px;
     color: #e83e8c;
@@ -24,6 +29,7 @@
     font-size: 1.0em;
 }
 
+/** コードブロック */
 table.codehilitetable td.code span {
     font-size: 1.15em;
 }
@@ -32,7 +38,7 @@ table.codehilitetable td.code span {
 dt {
   font-size: 1.15em;
   font-weight: bold;
-  font-family: monospace, serif;
+  font-family: 'JetBrains Mono', Consolas, monospace;
   color: #996666;
 }
 
