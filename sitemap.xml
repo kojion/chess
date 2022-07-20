@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://kojion.github.io/chess/index.html</loc>
+         <loc>https://kojion.github.io/chess/</loc>
          <lastmod>2022-07-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://kojion.github.io/chess/MkDocs/001.html</loc>
+         <loc>https://kojion.github.io/chess/MkDocs/001/</loc>
          <lastmod>2022-07-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://kojion.github.io/chess/MkDocs/002.html</loc>
+         <loc>https://kojion.github.io/chess/MkDocs/002/</loc>
          <lastmod>2022-07-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://kojion.github.io/chess/MkDocs/003.html</loc>
+         <loc>https://kojion.github.io/chess/MkDocs/003/</loc>
          <lastmod>2022-07-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
