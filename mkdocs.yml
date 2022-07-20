@@ -12,6 +12,7 @@ nav:
     - mkdocs/001.md
     - mkdocs/002.md
     - mkdocs/003.md
+    - mkdocs/004.md
 
 # テーマ
 theme:
