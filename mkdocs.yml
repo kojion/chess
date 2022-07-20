@@ -3,7 +3,6 @@ site_description: 'チェスの備忘録です。'
 site_author: 'Hideyuki Kojima'
 site_url: 'https://kojion.github.io/chess/'
 copyright: 'Copyright © 2022 Hideyuki Kojima.'
-use_directory_urls: false
 
 theme:
   name: 'material'
@@ -30,9 +29,7 @@ extra_javascript:
 plugins:
   - search:
       lang: ja
-  - glightbox:
-      width: 50%
-      height: 50%
+  - glightbox
 
 markdown_extensions:
   - admonition

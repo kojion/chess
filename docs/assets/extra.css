@@ -2,6 +2,11 @@
     font-size: 0.6rem;
 }
 
+.md-typeset {
+    font-size: 0.7rem;
+    line-height: 1.8;
+}
+
 .md-typeset h1 {
     font-size: 1.6em;
     font-weight: bold;
@@ -19,7 +24,6 @@
     font-size: 1.0em;
 }
 
-.md-typeset {
-    font-size: 0.7rem;
-    line-height: 1.8;
+table.codehilitetable td.code span {
+    font-size: 1.15em;
 }
