@@ -39,7 +39,7 @@ theme:
 extra:
   analytics:
     provider: google
-    propery: G-WE11TWYYEL
+    property: G-WE11TWYYEL
   social:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/zbxah
