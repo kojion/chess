@@ -7,7 +7,9 @@ copyright: 'Copyright © 2022 Hideyuki Kojima.'
 
 # ナビゲーション
 nav:
-  - index.md
+  - ホーム:
+    - index.md
+    - "YouTube チェス実況": home/youtube.md
   - MkDocs:
     - mkdocs/001.md
     - mkdocs/002.md
