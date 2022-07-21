@@ -35,6 +35,12 @@ theme:
     - navigation.expand
     - toc.integrate
 
+# Google Analytics
+extra:
+  analytics:
+    provider: google
+    property: G-324152304
+
 # 拡張 CSS
 extra_css:
   - assets/extra.css
