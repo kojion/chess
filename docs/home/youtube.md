@@ -1,6 +1,5 @@
 ---
-description: コジオン: チェス実況という YouTube チャンネルの概要・沿革・始めたきっかけについてまとめています。 
-image: mkdocs/images/002-01.png
+description: YouTube チャンネルの概要・沿革・始めたきっかけについてまとめています。 
 ---
 
 # YouTube チェス実況
