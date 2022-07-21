@@ -5,12 +5,12 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<meta content="MkDocs に GitHub Discussions を使用したコメントシステムを付加する方法について説明します。" name="description"/>
+<meta content="MkDocs に Twitter Cards を設定する方法に関して説明します。" name="description"/>
 <meta content="Hideyuki Kojima" name="author"/>
-<link href="https://kojion.github.io/chess/mkdocs/005/" rel="canonical"/>
+<link href="https://kojion.github.io/chess/mkdocs/006/" rel="canonical"/>
 <link href="../../assets/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.3.0, mkdocs-material-8.2.15" name="generator"/>
-<title>Giscus - コジオン: チェス</title>
+<title>Twitter Cards - コジオン: チェス</title>
 <link href="../../assets/stylesheets/main.c382b1dc.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.cc9b2e1e.min.css" rel="stylesheet"/>
 <meta content="#02a6f2" name="theme-color"/>
@@ -21,20 +21,20 @@
 <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <meta content="website" property="og:type"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Giscus - コジオン: チェス" property="og:title"/>
-<meta content="Giscus - コジオン: チェス" name="twitter:title"/>
-<meta content="MkDocs に GitHub Discussions を使用したコメントシステムを付加する方法について説明します。" property="og:description"/>
-<meta content="MkDocs に GitHub Discussions を使用したコメントシステムを付加する方法について説明します。" name="twitter:description"/>
+<meta content="Twitter Cards - コジオン: チェス" property="og:title"/>
+<meta content="Twitter Cards - コジオン: チェス" name="twitter:title"/>
+<meta content="MkDocs に Twitter Cards を設定する方法に関して説明します。" property="og:description"/>
+<meta content="MkDocs に Twitter Cards を設定する方法に関して説明します。" name="twitter:description"/>
 <meta content="https://kojion.github.io/chess/mkdocs/images/005-02.png" property="og:image"/>
 <meta content="https://kojion.github.io/chess/mkdocs/images/005-02.png" name="twitter:image"/>
-<meta content="https://kojion.github.io/chess/mkdocs/005/" property="og:url"/>
+<meta content="https://kojion.github.io/chess/mkdocs/006/" property="og:url"/>
 <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>html.glightbox-open { overflow: initial; height: 100%; }</style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="orange" data-md-color-primary="light-blue" data-md-color-scheme="" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#giscus">
+<a class="md-skip" href="#twitter-cards">
           コンテンツにスキップ
         </a>
 </div>
@@ -58,7 +58,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Giscus
+              Twitter Cards
             
           </span>
 </div>
@@ -163,14 +163,19 @@
         mkdocs.yml 設定
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../005/">
+        Giscus
+      </a>
+</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-          Giscus
+          Twitter Cards
           <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        Giscus
+        Twitter Cards
       </a>
 <nav aria-label="目次" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
@@ -179,27 +184,27 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#twitter">
+    Twitter 投稿する場合は必須
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#_1">
-    コメントシステム
+    拡張テーマ
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#meta">
+    Meta
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_2">
-    導入
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
     動作確認
   </a>
 </li>
 </ul>
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../006/">
-        Twitter Cards
-      </a>
 </li>
 </ul>
 </nav>
@@ -211,112 +216,79 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="giscus">Giscus</h1>
-<h2 id="_1">コメントシステム</h2>
-<p>MkDocs のような最終的に HTML で表示する静的サイトの場合、以前までは記事に対するコメントを付与するといったような動的な要素を追加するのは難しいと考えていました。
-しかし Material テーマであれば <strong>Giscus</strong> という GitHub Discussions を使用してコメントを残せる仕組みが用意されています。
-今回こちらを試してみることにします。</p>
-<div class="admonition note">
-<p class="admonition-title">以前 Disqus があった気がする</p>
-<p>以前はクラウド型コメントシステムとして <strong>Disqus</strong> を使用するという記載があったように思いましたが、最近見てみると Giscus に置き換わっていました。
-そちらも使えるのだと思われますが、ここでは検証しません。</p>
-</div>
-<h2 id="_2">導入</h2>
-<p><a href="https://squidfunk.github.io/mkdocs-material/setup/adding-a-comment-system/">公式サイト: Adding a comment system</a> の通り実施してみることにします。</p>
-<dl>
-<dt>Giscus インストール</dt>
-<dd><a href="https://github.com/apps/giscus">Giscus App</a> のサイトから GitHub アプリとして Giscus をインストールします。</dd>
-<dt>GitHub Discussions を有効にする</dt>
-<dd><a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/enabling-or-disabling-github-discussions-for-a-repository">Enabling or disabling GitHub Discussions for your repository</a> の通り対象リポジトリで GitHub Discussions を有効にします。</dd>
-<dt>スニペット生成</dt>
-<dd><a href="https://giscus.app/ja">Giscus サイト</a>にアクセスし、設問に答えていって <code>&lt;script&gt;</code> スニペットを生成します。</dd>
-</dl>
-<div class="codehilite"><pre><span></span><code><span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">"https://giscus.app/client.js"</span>
-        <span class="na">data-repo=</span><span class="s">"kojion/chess"</span>
-        <span class="na">data-repo-id=</span><span class="s">"R_kgDOHr3XSw"</span>
-        <span class="na">data-category=</span><span class="s">"Announcements"</span>
-        <span class="na">data-category-id=</span><span class="s">"DIC_kwDOHr3XS84CQVzN"</span>
-        <span class="na">data-mapping=</span><span class="s">"pathname"</span>
-        <span class="na">data-reactions-enabled=</span><span class="s">"1"</span>
-        <span class="na">data-emit-metadata=</span><span class="s">"1"</span>
-        <span class="na">data-input-position=</span><span class="s">"top"</span>
-        <span class="na">data-theme=</span><span class="s">"light"</span>
-        <span class="na">data-lang=</span><span class="s">"ja"</span>
-        <span class="na">data-loading=</span><span class="s">"lazy"</span>
-        <span class="na">crossorigin=</span><span class="s">"anonymous"</span>
-        <span class="err">async</span><span class="nt">&gt;</span>
-<span class="nt">&lt;/script&gt;</span>
+<h1 id="twitter-cards">Twitter Cards</h1>
+<h2 id="twitter">Twitter 投稿する場合は必須</h2>
+<p>Twitter を使っている方はご存知かと思いますが、Twitter でリンクを貼り付けてツイートした場合
+<strong>Twitter Cards</strong> が設定されていないサイトの URL を貼り付けると普通のツイートと変わらない地味な見た目となります<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>。
+なので Twitter で記事を紹介したい場合などは設定が必須となります。
+具体的には以下のような <code>&lt;meta&gt;</code> タグを書いておけば Twitter 投稿時に解釈してくれます:</p>
+<div class="codehilite"><pre><span></span><code><span class="o">&lt;</span><span class="n">meta</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="ss">"twitter:title"</span><span class="w"> </span><span class="n">content</span><span class="o">=</span><span class="ss">"コジオニルク"</span><span class="o">/&gt;</span><span class="w"></span>
+<span class="o">&lt;</span><span class="n">meta</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="ss">"twitter:site"</span><span class="w"> </span><span class="n">content</span><span class="o">=</span><span class="ss">"@kojionilk"</span><span class="o">/&gt;</span><span class="w"></span>
+<span class="o">&lt;</span><span class="n">meta</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="ss">"twitter:description"</span><span class="w"> </span><span class="n">content</span><span class="o">=</span><span class="ss">"日記帳です。"</span><span class="o">/&gt;</span><span class="w"></span>
+<span class="o">&lt;</span><span class="n">meta</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="ss">"twitter:card"</span><span class="w"> </span><span class="n">content</span><span class="o">=</span><span class="ss">"summary"</span><span class="o">/&gt;</span><span class="w"></span>
+<span class="o">&lt;</span><span class="n">meta</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="ss">"twitter:image"</span><span class="w"> </span><span class="n">content</span><span class="o">=</span><span class="ss">"http://www.kojion.com/twitter.png"</span><span class="o">/&gt;</span><span class="w"></span>
 </code></pre></div>
-<dl>
-<dt>拡張テーマ用意</dt>
-<dd><code>mkdocs.yml</code> に拡張テーマを格納するための設定及びディレクトリを用意します。</dd>
-</dl>
+<p>ですので、このような内容を自動で生成して含めることができるようにすれば良いわけですが、そのためにテーマを拡張する必要があります。
+これに関しては<a href="https://balloon.asia/mkdocs/">ふうせん様の記事</a>が非常に参考になりました。</p>
+<h2 id="_1">拡張テーマ</h2>
+<p>拡張テーマを使用します。
+これに関しては <a href="../005/">Giscus</a> に書きましたが再掲します。
+まず <code>mkdocs.yml</code> に拡張テーマを格納するための設定及びディレクトリを用意します。</p>
 <div class="codehilite"><pre><span></span><code><span class="n">theme</span><span class="o">:</span><span class="w"></span>
 <span class="w">  </span><span class="n">custom_dir</span><span class="o">:</span><span class="w"> </span><span class="n">overrides</span><span class="w"></span>
 </code></pre></div>
-<dl>
-<dt>スニペット配置</dt>
-<dd><code>overrides/main.html</code> を用意し、以下の部分に先ほど生成したスニペットをペーストします:</dd>
-</dl>
-<div class="codehilite"><pre><span></span><code><span class="cp">{%</span> <span class="k">extends</span> <span class="s2">"base.html"</span> <span class="cp">%}</span>
+<p>次に <code>overrides/main.html</code> に以下の内容を記述してください:</p>
+<div class="codehilite"><pre><span></span><code><span class="cp">{%</span> <span class="k">extends</span> <span class="s2">"base.html"</span> <span class="cp">%}</span><span class="x"></span>
 
-<span class="cp">{%</span> <span class="k">block</span> <span class="nv">content</span> <span class="cp">%}</span>
-  <span class="cp">{{</span> <span class="nb">super</span><span class="o">()</span> <span class="cp">}}</span>
-
-  <span class="cm">&lt;!-- Giscus --&gt;</span>
-  <span class="nt">&lt;h2</span> <span class="na">id=</span><span class="s">"__comments"</span><span class="nt">&gt;</span><span class="cp">{{</span> <span class="nv">lang.t</span><span class="o">(</span><span class="s2">"meta.comments"</span><span class="o">)</span> <span class="cp">}}</span><span class="nt">&lt;/h2&gt;</span>
-  <span class="cm">&lt;!-- Replace with generated snippet --&gt;</span>
-
-  <span class="cm">&lt;!-- Synchronize Giscus theme with palette --&gt;</span>
-  <span class="nt">&lt;script&gt;</span>
-    var giscus = document.querySelector("script[src*=giscus]")
-
-    /* Set palette on initial load */
-    var palette = __md_get("__palette")
-    if (palette <span class="err">&amp;&amp;</span> typeof palette.color === "object") {
-      var theme = palette.color.scheme === "slate" ? "dark" : "light"
-      giscus.setAttribute("data-theme", theme) 
-    }
-
-    /* Register event handlers after documented loaded */
-    document.addEventListener("DOMContentLoaded", function() {
-      var ref = document.querySelector("[data-md-component=palette]")
-      ref.addEventListener("change", function() {
-        var palette = __md_get("__palette")
-        if (palette <span class="err">&amp;&amp;</span> typeof palette.color === "object") {
-          var theme = palette.color.scheme === "slate" ? "dark" : "light"
-
-          /* Instruct Giscus to change theme */
-          var frame = document.querySelector(".giscus-frame")
-          frame.contentWindow.postMessage(
-            { giscus: { setConfig: { theme } } },
-            "https://giscus.app"
-          )
-        }
-      })
-    })
-  <span class="nt">&lt;/script&gt;</span>
-<span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span>
+<span class="cp">{%</span> <span class="k">block</span> <span class="nv">extrahead</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">  </span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">title</span> <span class="o">=</span> <span class="nv">config.site_name</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">  </span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">page</span> <span class="k">and</span> <span class="nv">page.title</span> <span class="k">and</span> <span class="k">not</span> <span class="nv">page.is_homepage</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    </span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">title</span> <span class="o">=</span> <span class="nv">page.title</span> <span class="o">~</span> <span class="s2">" - "</span> <span class="o">~</span> <span class="nv">config.site_name</span> <span class="o">|</span> <span class="nf">striptags</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">  </span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">  </span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">description</span> <span class="o">=</span> <span class="nv">config.site_description</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">  </span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">page</span> <span class="k">and</span> <span class="nv">page.meta.description</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    </span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">description</span> <span class="o">=</span> <span class="nv">page.meta.description</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">  </span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">  </span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">image</span> <span class="o">=</span> <span class="nv">config.site_url</span> <span class="o">~</span> <span class="s1">'assets/twitter.jpg'</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">  </span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">page</span> <span class="k">and</span> <span class="nv">page.meta.image</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    </span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">image</span> <span class="o">=</span> <span class="nv">config.site_url</span> <span class="o">~</span> <span class="nv">page.meta.image</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">  </span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">  &lt;meta property="og:type" content="website"&gt;</span>
+<span class="x">  &lt;meta name="twitter:card" content="summary_large_image"&gt;</span>
+<span class="x">  &lt;meta property="og:title" content="</span><span class="cp">{{</span> <span class="nv">title</span> <span class="cp">}}</span><span class="x">"&gt;</span>
+<span class="x">  &lt;meta name="twitter:title" content="</span><span class="cp">{{</span> <span class="nv">title</span> <span class="cp">}}</span><span class="x">"&gt;</span>
+<span class="x">  &lt;meta property="og:description" content="</span><span class="cp">{{</span> <span class="nv">description</span> <span class="cp">}}</span><span class="x">"&gt;</span>
+<span class="x">  &lt;meta name="twitter:description" content="</span><span class="cp">{{</span> <span class="nv">description</span> <span class="cp">}}</span><span class="x">"&gt;</span>
+<span class="x">  &lt;meta property="og:image" content="</span><span class="cp">{{</span> <span class="nv">image</span> <span class="cp">}}</span><span class="x">"&gt;</span>
+<span class="x">  &lt;meta name="twitter:image" content="</span><span class="cp">{{</span> <span class="nv">image</span> <span class="cp">}}</span><span class="x">"&gt;</span>
+<span class="x">  &lt;meta property="og:url" content="</span><span class="cp">{{</span> <span class="nv">page.canonical_url</span> <span class="cp">}}</span><span class="x">"&gt;</span>
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span><span class="x"></span>
 </code></pre></div>
-<p>これでアクセスしてみると動きました。</p>
-<h2 id="_3">動作確認</h2>
-<p><a class="glightbox" href="../images/005-01.png"><img align="left" alt="" src="../images/005-01.png" width="30%"/></a></p>
-<p>各ページ下部に左図の通りコメントの入力フォームが表示されましたが、見てみたところ <strong>GitHub ユーザでログインする必要がある</strong>ように見えます。
-ログインしないとコメントは入力できません。
-<strong>リアクション</strong>という機能があって高評価、低評価などの反応を絵文字で付けることができるのですが、こちらも GitHub ユーザでログインしていないと付けることができません。
-Twitter アカウントや Google アカウント連携でできれば良かったのですが GitHub ユーザとなるとちょっと敷居が高いように思います。
-ただスパムで適当なコメントを連発されるような嫌がらせを避けるという意味では GitHub ユーザという出処がハッキリするというのは安心なのかもしれません。
-試しに GitHub アカウントでログインしてテストコメントをしてみます。</p>
-<p><a class="glightbox" href="../images/005-02.png"><img align="left" alt="" src="../images/005-02.png" width="30%"/></a></p>
-<p>このようにテストコメントを行うことができました。
-Markdown も解釈されていて、見た目も大変良いです。
-尚、コメントした直後に GitHub に登録されているメールアドレスに対してコメントがあったことを示す通知が届きました。
-これならコメントを見逃すこともありません。
-リアクションという機能もちゃんと動作することが確認できました。
-コメントを編集・削除したい場合は GitHub の対象リポジトリの GitHub Discussions のページに遷移すると行うことができます。</p>
-<p>まとめると、コメントできる対象が GitHub ユーザであるという条件がついてしまうのが残念ですが、それ以外は非常に便利に使える良い機能と思いました。
-GitHub ユーザでない方のために<strong>GitHub アカウントをお持ちの方のみコメントすることができます。お持ちでない方はメールや Twitter などでご指摘ください</strong>
-などといった注意書きを併記することで活用できれば良さそうです。</p>
+<p>これにより各 Markdown ファイルの先頭 <code>description</code> や <code>image</code> といったメタデータがあればそれを使用し、なければデフォルトの値を使用するといった挙動となります。
+ただ、メタデータを記述するために <code>mkdocs.yml</code> に設定が必要なので、この後それを行います。</p>
+<h2 id="meta">Meta</h2>
+<p><code>mkdocs.yml</code> に以下を追加します:</p>
+<div class="codehilite"><pre><span></span><code>markdown_extensions:
+  - meta
+</code></pre></div>
+<p>そして各 Markdown ファイルの先頭に下記のような記述を追加してください:</p>
+<div class="codehilite"><pre><span></span><code>---
+description: MkDocs に Twitter Cards を設定する方法に関して説明します。
+image: mkdocs/images/005-02.png
+---
+</code></pre></div>
+<p>設定がうまくいっていれば、これらのメタ情報が <code>&lt;meta&gt;</code> タグとして生成されます。</p>
+<h2 id="_2">動作確認</h2>
+<p><a href="https://cards-dev.twitter.com/validator">Twitter Card Validator</a> にデプロイしたサイトの対象 URL を貼り付けて Twitter Cards のメタタグが正しく生成されているかを確認します。
+若しくは Twitter で試しにツイートしてみて、すぐに削除してもよいでしょう。</p>
+<div class="footnote">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>そのためにそういうサイトのツイートをする際はあえて画面キャプチャしてその画像と一緒にリンクを貼り付けて目立つようにするなど工夫すると良いです <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+</ol>
+</div>
 <!-- Giscus -->
 <h2 id="__comments">コメント</h2>
 <script async="" crossorigin="anonymous" data-category="Announcements" data-category-id="DIC_kwDOHr3XS84CQVzN" data-emit-metadata="1" data-input-position="top" data-lang="ja" data-loading="lazy" data-mapping="pathname" data-reactions-enabled="1" data-repo="kojion/chess" data-repo-id="R_kgDOHr3XSw" data-theme="light" src="https://giscus.app/client.js">
@@ -360,7 +332,7 @@ GitHub ユーザでない方のために<strong>GitHub アカウントをお持�
 </main>
 <footer class="md-footer">
 <nav aria-label="フッター" class="md-footer__inner md-grid">
-<a aria-label="前: mkdocs.yml 設定" class="md-footer__link md-footer__link--prev" href="../004/" rel="prev">
+<a aria-label="前: Giscus" class="md-footer__link md-footer__link--prev" href="../005/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -369,21 +341,8 @@ GitHub ユーザでない方のために<strong>GitHub アカウントをお持�
 <span class="md-footer__direction">
                 前
               </span>
-              mkdocs.yml 設定
+              Giscus
             </div>
-</div>
-</a>
-<a aria-label="次: Twitter Cards" class="md-footer__link md-footer__link--next" href="../006/" rel="next">
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                次
-              </span>
-              Twitter Cards
-            </div>
-</div>
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
 </div>
 </a>
 </nav>
