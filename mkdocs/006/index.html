@@ -19,8 +19,6 @@
 <style>:root{--md-text-font:"BIZ UDPGothic";--md-code-font:"JetBrains Mono"}</style>
 <link href="../../assets/extra.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-324152304"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&gtag("event","search",{search_term:this.value})}),"undefined"!=typeof location$&&location$.subscribe(function(e){gtag("config","G-324152304",{page_path:e.pathname})})})</script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-324152304"></script>
 <meta content="website" property="og:type"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="Twitter Cards - コジオン: チェス" property="og:title"/>
@@ -224,11 +222,11 @@
 <strong>Twitter Cards</strong> が設定されていないサイトの URL を貼り付けると普通のツイートと変わらない地味な見た目となります<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>。
 なので Twitter で記事を紹介したい場合などは設定が必須となります。
 具体的には以下のような <code>&lt;meta&gt;</code> タグを書いておけば Twitter 投稿時に解釈してくれます:</p>
-<div class="codehilite"><pre><span></span><code><span class="o">&lt;</span><span class="n">meta</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="ss">"twitter:title"</span><span class="w"> </span><span class="n">content</span><span class="o">=</span><span class="ss">"コジオニルク"</span><span class="o">/&gt;</span><span class="w"></span>
-<span class="o">&lt;</span><span class="n">meta</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="ss">"twitter:site"</span><span class="w"> </span><span class="n">content</span><span class="o">=</span><span class="ss">"@kojionilk"</span><span class="o">/&gt;</span><span class="w"></span>
-<span class="o">&lt;</span><span class="n">meta</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="ss">"twitter:description"</span><span class="w"> </span><span class="n">content</span><span class="o">=</span><span class="ss">"日記帳です。"</span><span class="o">/&gt;</span><span class="w"></span>
-<span class="o">&lt;</span><span class="n">meta</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="ss">"twitter:card"</span><span class="w"> </span><span class="n">content</span><span class="o">=</span><span class="ss">"summary"</span><span class="o">/&gt;</span><span class="w"></span>
-<span class="o">&lt;</span><span class="n">meta</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="ss">"twitter:image"</span><span class="w"> </span><span class="n">content</span><span class="o">=</span><span class="ss">"http://www.kojion.com/twitter.png"</span><span class="o">/&gt;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">"twitter:title"</span> <span class="na">content</span><span class="o">=</span><span class="s">"コジオニルク"</span><span class="p">/&gt;</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">"twitter:site"</span> <span class="na">content</span><span class="o">=</span><span class="s">"@kojionilk"</span><span class="p">/&gt;</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">"twitter:description"</span> <span class="na">content</span><span class="o">=</span><span class="s">"日記帳です。"</span><span class="p">/&gt;</span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">"twitter:card"</span> <span class="na">content</span><span class="o">=</span><span class="s">"summary"</span><span class="p">/&gt;</span>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">"twitter:image"</span> <span class="na">content</span><span class="o">=</span><span class="s">"http://www.kojion.com/twitter.png"</span><span class="p">/&gt;</span>
 </code></pre></div>
 <p>ですので、このような内容を自動で生成して含めることができるようにすれば良いわけですが、そのためにテーマを拡張する必要があります。
 これに関しては<a href="https://balloon.asia/mkdocs/">ふうせん様の記事</a>が非常に参考になりました。</p>
@@ -236,48 +234,48 @@
 <p>拡張テーマを使用します。
 これに関しては <a href="../005/">Giscus</a> に書きましたが再掲します。
 まず <code>mkdocs.yml</code> に拡張テーマを格納するための設定及びディレクトリを用意します。</p>
-<div class="codehilite"><pre><span></span><code><span class="n">theme</span><span class="o">:</span><span class="w"></span>
-<span class="w">  </span><span class="n">custom_dir</span><span class="o">:</span><span class="w"> </span><span class="n">overrides</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nt">theme</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">  </span><span class="nt">custom_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">overrides</span><span class="w"></span>
 </code></pre></div>
 <p>次に <code>overrides/main.html</code> に以下の内容を記述してください:</p>
-<div class="codehilite"><pre><span></span><code><span class="cp">{%</span> <span class="k">extends</span> <span class="s2">"base.html"</span> <span class="cp">%}</span><span class="x"></span>
-
-<span class="cp">{%</span> <span class="k">block</span> <span class="nv">extrahead</span> <span class="cp">%}</span><span class="x"></span>
-<span class="x">  </span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">title</span> <span class="o">=</span> <span class="nv">config.site_name</span> <span class="cp">%}</span><span class="x"></span>
-<span class="x">  </span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">page</span> <span class="k">and</span> <span class="nv">page.title</span> <span class="k">and</span> <span class="k">not</span> <span class="nv">page.is_homepage</span> <span class="cp">%}</span><span class="x"></span>
-<span class="x">    </span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">title</span> <span class="o">=</span> <span class="nv">page.title</span> <span class="o">~</span> <span class="s2">" - "</span> <span class="o">~</span> <span class="nv">config.site_name</span> <span class="o">|</span> <span class="nf">striptags</span> <span class="cp">%}</span><span class="x"></span>
-<span class="x">  </span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
-<span class="x">  </span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">description</span> <span class="o">=</span> <span class="nv">config.site_description</span> <span class="cp">%}</span><span class="x"></span>
-<span class="x">  </span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">page</span> <span class="k">and</span> <span class="nv">page.meta.description</span> <span class="cp">%}</span><span class="x"></span>
-<span class="x">    </span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">description</span> <span class="o">=</span> <span class="nv">page.meta.description</span> <span class="cp">%}</span><span class="x"></span>
-<span class="x">  </span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
-<span class="x">  </span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">image</span> <span class="o">=</span> <span class="nv">config.site_url</span> <span class="o">~</span> <span class="s1">'assets/twitter.jpg'</span> <span class="cp">%}</span><span class="x"></span>
-<span class="x">  </span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">page</span> <span class="k">and</span> <span class="nv">page.meta.image</span> <span class="cp">%}</span><span class="x"></span>
-<span class="x">    </span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">image</span> <span class="o">=</span> <span class="nv">config.site_url</span> <span class="o">~</span> <span class="nv">page.meta.image</span> <span class="cp">%}</span><span class="x"></span>
-<span class="x">  </span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
-<span class="x">  &lt;meta property="og:type" content="website"&gt;</span>
-<span class="x">  &lt;meta name="twitter:card" content="summary_large_image"&gt;</span>
-<span class="x">  &lt;meta property="og:title" content="</span><span class="cp">{{</span> <span class="nv">title</span> <span class="cp">}}</span><span class="x">"&gt;</span>
-<span class="x">  &lt;meta name="twitter:title" content="</span><span class="cp">{{</span> <span class="nv">title</span> <span class="cp">}}</span><span class="x">"&gt;</span>
-<span class="x">  &lt;meta property="og:description" content="</span><span class="cp">{{</span> <span class="nv">description</span> <span class="cp">}}</span><span class="x">"&gt;</span>
-<span class="x">  &lt;meta name="twitter:description" content="</span><span class="cp">{{</span> <span class="nv">description</span> <span class="cp">}}</span><span class="x">"&gt;</span>
-<span class="x">  &lt;meta property="og:image" content="</span><span class="cp">{{</span> <span class="nv">image</span> <span class="cp">}}</span><span class="x">"&gt;</span>
-<span class="x">  &lt;meta name="twitter:image" content="</span><span class="cp">{{</span> <span class="nv">image</span> <span class="cp">}}</span><span class="x">"&gt;</span>
-<span class="x">  &lt;meta property="og:url" content="</span><span class="cp">{{</span> <span class="nv">page.canonical_url</span> <span class="cp">}}</span><span class="x">"&gt;</span>
-<span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span><span class="x"></span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">{</span><span class="o">%</span> <span class="n">extends</span> <span class="s2">"base.html"</span> <span class="o">%</span><span class="p">}</span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="p">{</span><span class="o">%</span> <span class="n">block</span> <span class="n">extrahead</span> <span class="o">%</span><span class="p">}</span>
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>  <span class="p">{</span><span class="o">%</span> <span class="nb">set</span> <span class="n">title</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">site_name</span> <span class="o">%</span><span class="p">}</span>
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>  <span class="p">{</span><span class="o">%</span> <span class="k">if</span> <span class="n">page</span> <span class="ow">and</span> <span class="n">page</span><span class="o">.</span><span class="n">title</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">page</span><span class="o">.</span><span class="n">is_homepage</span> <span class="o">%</span><span class="p">}</span>
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>    <span class="p">{</span><span class="o">%</span> <span class="nb">set</span> <span class="n">title</span> <span class="o">=</span> <span class="n">page</span><span class="o">.</span><span class="n">title</span> <span class="o">~</span> <span class="s2">" - "</span> <span class="o">~</span> <span class="n">config</span><span class="o">.</span><span class="n">site_name</span> <span class="o">|</span> <span class="n">striptags</span> <span class="o">%</span><span class="p">}</span>
+<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a>  <span class="p">{</span><span class="o">%</span> <span class="n">endif</span> <span class="o">%</span><span class="p">}</span>
+<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a>  <span class="p">{</span><span class="o">%</span> <span class="nb">set</span> <span class="n">description</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">site_description</span> <span class="o">%</span><span class="p">}</span>
+<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a>  <span class="p">{</span><span class="o">%</span> <span class="k">if</span> <span class="n">page</span> <span class="ow">and</span> <span class="n">page</span><span class="o">.</span><span class="n">meta</span><span class="o">.</span><span class="n">description</span> <span class="o">%</span><span class="p">}</span>
+<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a>    <span class="p">{</span><span class="o">%</span> <span class="nb">set</span> <span class="n">description</span> <span class="o">=</span> <span class="n">page</span><span class="o">.</span><span class="n">meta</span><span class="o">.</span><span class="n">description</span> <span class="o">%</span><span class="p">}</span>
+<a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a>  <span class="p">{</span><span class="o">%</span> <span class="n">endif</span> <span class="o">%</span><span class="p">}</span>
+<a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a>  <span class="p">{</span><span class="o">%</span> <span class="nb">set</span> <span class="n">image</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">site_url</span> <span class="o">~</span> <span class="s1">'assets/twitter.jpg'</span> <span class="o">%</span><span class="p">}</span>
+<a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a>  <span class="p">{</span><span class="o">%</span> <span class="k">if</span> <span class="n">page</span> <span class="ow">and</span> <span class="n">page</span><span class="o">.</span><span class="n">meta</span><span class="o">.</span><span class="n">image</span> <span class="o">%</span><span class="p">}</span>
+<a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a>    <span class="p">{</span><span class="o">%</span> <span class="nb">set</span> <span class="n">image</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">site_url</span> <span class="o">~</span> <span class="n">page</span><span class="o">.</span><span class="n">meta</span><span class="o">.</span><span class="n">image</span> <span class="o">%</span><span class="p">}</span>
+<a href="#__codelineno-2-15" id="__codelineno-2-15" name="__codelineno-2-15"></a>  <span class="p">{</span><span class="o">%</span> <span class="n">endif</span> <span class="o">%</span><span class="p">}</span>
+<a href="#__codelineno-2-16" id="__codelineno-2-16" name="__codelineno-2-16"></a>  <span class="o">&lt;</span><span class="n">meta</span> <span class="nb">property</span><span class="o">=</span><span class="s2">"og:type"</span> <span class="n">content</span><span class="o">=</span><span class="s2">"website"</span><span class="o">&gt;</span>
+<a href="#__codelineno-2-17" id="__codelineno-2-17" name="__codelineno-2-17"></a>  <span class="o">&lt;</span><span class="n">meta</span> <span class="n">name</span><span class="o">=</span><span class="s2">"twitter:card"</span> <span class="n">content</span><span class="o">=</span><span class="s2">"summary_large_image"</span><span class="o">&gt;</span>
+<a href="#__codelineno-2-18" id="__codelineno-2-18" name="__codelineno-2-18"></a>  <span class="o">&lt;</span><span class="n">meta</span> <span class="nb">property</span><span class="o">=</span><span class="s2">"og:title"</span> <span class="n">content</span><span class="o">=</span><span class="s2">"{{ title }}"</span><span class="o">&gt;</span>
+<a href="#__codelineno-2-19" id="__codelineno-2-19" name="__codelineno-2-19"></a>  <span class="o">&lt;</span><span class="n">meta</span> <span class="n">name</span><span class="o">=</span><span class="s2">"twitter:title"</span> <span class="n">content</span><span class="o">=</span><span class="s2">"{{ title }}"</span><span class="o">&gt;</span>
+<a href="#__codelineno-2-20" id="__codelineno-2-20" name="__codelineno-2-20"></a>  <span class="o">&lt;</span><span class="n">meta</span> <span class="nb">property</span><span class="o">=</span><span class="s2">"og:description"</span> <span class="n">content</span><span class="o">=</span><span class="s2">"{{ description }}"</span><span class="o">&gt;</span>
+<a href="#__codelineno-2-21" id="__codelineno-2-21" name="__codelineno-2-21"></a>  <span class="o">&lt;</span><span class="n">meta</span> <span class="n">name</span><span class="o">=</span><span class="s2">"twitter:description"</span> <span class="n">content</span><span class="o">=</span><span class="s2">"{{ description }}"</span><span class="o">&gt;</span>
+<a href="#__codelineno-2-22" id="__codelineno-2-22" name="__codelineno-2-22"></a>  <span class="o">&lt;</span><span class="n">meta</span> <span class="nb">property</span><span class="o">=</span><span class="s2">"og:image"</span> <span class="n">content</span><span class="o">=</span><span class="s2">"{{ image }}"</span><span class="o">&gt;</span>
+<a href="#__codelineno-2-23" id="__codelineno-2-23" name="__codelineno-2-23"></a>  <span class="o">&lt;</span><span class="n">meta</span> <span class="n">name</span><span class="o">=</span><span class="s2">"twitter:image"</span> <span class="n">content</span><span class="o">=</span><span class="s2">"{{ image }}"</span><span class="o">&gt;</span>
+<a href="#__codelineno-2-24" id="__codelineno-2-24" name="__codelineno-2-24"></a>  <span class="o">&lt;</span><span class="n">meta</span> <span class="nb">property</span><span class="o">=</span><span class="s2">"og:url"</span> <span class="n">content</span><span class="o">=</span><span class="s2">"{{ page.canonical_url }}"</span><span class="o">&gt;</span>
+<a href="#__codelineno-2-25" id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="p">{</span><span class="o">%</span> <span class="n">endblock</span> <span class="o">%</span><span class="p">}</span>
 </code></pre></div>
 <p>これにより各 Markdown ファイルの先頭 <code>description</code> や <code>image</code> といったメタデータがあればそれを使用し、なければデフォルトの値を使用するといった挙動となります。
 ただ、メタデータを記述するために <code>mkdocs.yml</code> に設定が必要なので、この後それを行います。</p>
 <h2 id="meta">Meta</h2>
 <p><code>mkdocs.yml</code> に以下を追加します:</p>
-<div class="codehilite"><pre><span></span><code>markdown_extensions:
-  - meta
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nt">markdown_extensions</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">meta</span><span class="w"></span>
 </code></pre></div>
 <p>そして各 Markdown ファイルの先頭に下記のような記述を追加してください:</p>
-<div class="codehilite"><pre><span></span><code>---
-description: MkDocs に Twitter Cards を設定する方法に関して説明します。
-image: mkdocs/images/005-02.png
----
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>---
+<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>description: MkDocs に Twitter Cards を設定する方法に関して説明します。
+<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="gu">image: mkdocs/images/005-02.png</span>
+<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="gu">---</span>
 </code></pre></div>
 <p>設定がうまくいっていれば、これらのメタ情報が <code>&lt;meta&gt;</code> タグとして生成されます。</p>
 <h2 id="_2">動作確認</h2>
@@ -360,6 +358,17 @@ image: mkdocs/images/005-02.png
     <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
       Material for MkDocs
     </a>
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://twitter.com/zbxah" rel="noopener" target="_blank" title="コジオン on Twitter">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+</a>
+<a class="md-social__link" href="https://github.com/kojion/chess" rel="noopener" target="_blank" title="GitHub Repository">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+<a class="md-social__link" href="mailto:kojionilk@gmail.com" rel="noopener" target="_blank" title="Email to Kojion">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="m511.6 36.86-64 415.1a32.008 32.008 0 0 1-31.65 27.147c-4.188 0-8.319-.815-12.29-2.472l-122.6-51.1-50.86 76.29C226.3 508.5 219.8 512 212.8 512c-11.5 0-20.8-9.3-20.8-20.8v-96.18c0-7.115 2.372-14.03 6.742-19.64L416 96 122.3 360.3 19.69 317.5C8.438 312.8.812 302.2.062 289.1s5.47-23.72 16.06-29.77l448-255.1c10.69-6.109 23.88-5.547 34 1.406S513.5 24.72 511.6 36.86z"></path></svg>
+</a>
 </div>
 </div>
 </div>
