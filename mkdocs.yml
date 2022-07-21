@@ -39,7 +39,17 @@ theme:
 extra:
   analytics:
     provider: google
-    property: G-324152304
+    propery: G-324152304
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/zbxah
+      name: コジオン on Twitter
+    - icon: fontawesome/brands/github
+      link: https://github.com/kojion/chess
+      name: GitHub Repository
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:kojionilk@gmail.com
+      name: Email to Kojion
 
 # 拡張 CSS
 extra_css:
@@ -59,7 +69,11 @@ plugins:
 markdown_extensions:
   - admonition
   - footnotes
-  - codehilite
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
   - def_list
   - pymdownx.tasklist:
       custom_checkbox: true
