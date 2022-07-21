@@ -179,6 +179,11 @@
     導入
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    動作確認
+  </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -280,6 +285,24 @@
 <span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span>
 </code></pre></div>
 <p>これでアクセスしてみると動きました。</p>
+<h2 id="_3">動作確認</h2>
+<p><a class="glightbox" href="../images/005-01.png"><img align="left" alt="" src="../images/005-01.png" width="30%"/></a></p>
+<p>各ページ下部に左図の通りコメントの入力フォームが表示されましたが、見てみたところ <strong>GitHub ユーザでログインする必要がある</strong>ように見えます。
+ログインしないとコメントは入力できません。
+<strong>リアクション</strong>という機能があって高評価、低評価などの反応を絵文字で付けることができるのですが、こちらも GitHub ユーザでログインしていないと付けることができません。
+Twitter アカウントや Google アカウント連携でできれば良かったのですが GitHub ユーザとなるとちょっと敷居が高いように思います。
+ただスパムで適当なコメントを連発されるような嫌がらせを避けるという意味では GitHub ユーザという出処がハッキリするというのは安心なのかもしれません。
+試しに GitHub アカウントでログインしてテストコメントをしてみます。</p>
+<p><a class="glightbox" href="../images/005-02.png"><img align="left" alt="" src="../images/005-02.png" width="30%"/></a></p>
+<p>このようにテストコメントを行うことができました。
+Markdown も解釈されていて、見た目も大変良いです。
+尚、コメントした直後に GitHub に登録されているメールアドレスに対してコメントがあったことを示す通知が届きました。
+これならコメントを見逃すこともありません。
+リアクションという機能もちゃんと動作することが確認できました。
+コメントを編集・削除したい場合は GitHub の対象リポジトリの GitHub Discussions のページに遷移すると行うことができます。</p>
+<p>まとめると、コメントできる対象が GitHub ユーザであるという条件がついてしまうのが残念ですが、それ以外は非常に便利に使える良い機能と思いました。
+GitHub ユーザでない方のために<strong>GitHub アカウントをお持ちの方のみコメントすることができます。お持ちでない方はメールや Twitter などでご指摘ください</strong>
+などといった注意書きを併記することで活用できれば良さそうです。</p>
 <!-- Giscus -->
 <h2 id="__comments">コメント</h2>
 <script async="" crossorigin="anonymous" data-category="Announcements" data-category-id="DIC_kwDOHr3XS84CQVzN" data-emit-metadata="1" data-input-position="top" data-lang="ja" data-loading="lazy" data-mapping="pathname" data-reactions-enabled="1" data-repo="kojion/chess" data-repo-id="R_kgDOHr3XSw" data-theme="light" src="https://giscus.app/client.js">
