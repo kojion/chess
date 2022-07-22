@@ -36,12 +36,28 @@ table.codehilitetable td.code span {
 
 /** 定義リスト */
 dt {
-  font-size: 1.15em;
-  font-weight: bold;
-  font-family: 'JetBrains Mono', Consolas, monospace;
-  color: #996666;
+    font-size: 1.15em;
+    font-weight: bold;
+    font-family: 'JetBrains Mono', Consolas, monospace;
+    color: #996666;
 }
 
 dd {
-  font-size: 0.9em;
+    font-size: 0.9em;
+}
+
+/** テーブル */
+.md-typeset table:not([class]) {
+    border: 0.05rem solid var(--md-primary-fg-color);
+}
+
+.md-typeset table:not([class]) th {
+    padding: 0.4em 1.0em;
+    color: white;
+    background-color: var(--md-primary-fg-color);
+}
+
+.md-typeset table:not([class]) td {
+    border-top: 0.05rem solid var(--md-primary-fg-color);
+    padding: 0.4em 1.0em;
 }
