@@ -9,7 +9,7 @@ copyright: 'Copyright © 2022 Hideyuki Kojima.'
 nav:
   - 雑記:
     - index.md
-    - home/youtube.md
+    - note/youtube.md
   - MkDocs:
     - mkdocs/001.md
     - mkdocs/002.md
