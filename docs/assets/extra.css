@@ -47,11 +47,17 @@ dd {
 }
 
 /** テーブル */
+.md-typeset table:not([class]) {
+    border: 0.05rem solid var(--md-primary-fg-color);
+}
+
 .md-typeset table:not([class]) th {
-    padding: 0.2em 1.0em;
-    background-color: #eee;
+    padding: 0.4em 1.0em;
+    color: white;
+    background-color: var(--md-primary-fg-color);
 }
 
 .md-typeset table:not([class]) td {
-    padding: 0.2em 1.0em;
+    border-top: 0.05rem solid var(--md-primary-fg-color);
+    padding: 0.4em 1.0em;
 }
