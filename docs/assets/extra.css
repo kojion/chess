@@ -21,6 +21,12 @@
     font-weight: bold;
 }
 
+/** h3 */
+.md-typeset h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
 /** インラインコード */
 .md-typeset p > code {
     padding: 2px 8px;
@@ -60,4 +66,14 @@ dd {
 .md-typeset table:not([class]) td {
     border-top: 0.05rem solid var(--md-primary-fg-color);
     padding: 0.4em 1.0em;
+}
+
+/** 画像中央寄せ */
+.img-center {
+   margin: 0 auto;
+}
+
+/** 画像キャプション */
+.md-typeset figcaption {
+    font-weight: bold;
 }

@@ -22,5 +22,6 @@
 
 |日付|内容|
 |:--|:--|
+|2022-07-22|[自己紹介](note/introduction.md) 記載|
 |2022-07-22|[YouTube チャンネルについて](note/youtube.md) 記載|
 |2022-07-20|サイト開設 / [MkDocs](mkdocs/001.md) に関して記載|
