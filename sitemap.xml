@@ -2,42 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://kojion.github.io/chess/</loc>
-         <lastmod>2022-07-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://kojion.github.io/chess/home/youtube/</loc>
-         <lastmod>2022-07-21</lastmod>
+         <lastmod>2022-07-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kojion.github.io/chess/mkdocs/001/</loc>
-         <lastmod>2022-07-21</lastmod>
+         <lastmod>2022-07-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kojion.github.io/chess/mkdocs/002/</loc>
-         <lastmod>2022-07-21</lastmod>
+         <lastmod>2022-07-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kojion.github.io/chess/mkdocs/003/</loc>
-         <lastmod>2022-07-21</lastmod>
+         <lastmod>2022-07-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kojion.github.io/chess/mkdocs/004/</loc>
-         <lastmod>2022-07-21</lastmod>
+         <lastmod>2022-07-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kojion.github.io/chess/mkdocs/005/</loc>
-         <lastmod>2022-07-21</lastmod>
+         <lastmod>2022-07-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kojion.github.io/chess/mkdocs/006/</loc>
-         <lastmod>2022-07-21</lastmod>
+         <lastmod>2022-07-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kojion.github.io/chess/note/youtube/</loc>
+         <lastmod>2022-07-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
