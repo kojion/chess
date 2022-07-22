@@ -244,14 +244,17 @@
 そちらも使えるのだと思われますが、ここでは検証しません。</p>
 </div>
 <h2 id="_2">導入</h2>
-<p><a href="https://squidfunk.github.io/mkdocs-material/setup/adding-a-comment-system/">公式サイト: Adding a comment system</a> の通り実施してみることにします。</p>
+<p><a href="https://squidfunk.github.io/mkdocs-material/setup/adding-a-comment-system/">公式サイト: Adding a comment system</a>
+の通り実施してみることにします。</p>
 <dl>
 <dt>Giscus インストール</dt>
 <dd><a href="https://github.com/apps/giscus">Giscus App</a> のサイトから GitHub アプリとして Giscus をインストールします。</dd>
 <dt>GitHub Discussions を有効にする</dt>
-<dd><a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/enabling-or-disabling-github-discussions-for-a-repository">Enabling or disabling GitHub Discussions for your repository</a> の通り対象リポジトリで GitHub Discussions を有効にします。</dd>
+<dd><a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/enabling-or-disabling-github-discussions-for-a-repository">Enabling or disabling GitHub Discussions for your repository</a>
+の通り対象リポジトリで GitHub Discussions を有効にします。</dd>
 <dt>スニペット生成</dt>
-<dd><a href="https://giscus.app/ja">Giscus サイト</a>にアクセスし、設問に答えていって <code>&lt;script&gt;</code> スニペットを生成します。</dd>
+<dd><a href="https://giscus.app/ja">Giscus サイト</a>
+にアクセスし、設問に答えていって <code>&lt;script&gt;</code> スニペットを生成します。</dd>
 </dl>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://giscus.app/client.js"</span>
 <a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>        <span class="na">data-repo</span><span class="o">=</span><span class="s">"kojion/chess"</span>
@@ -323,9 +326,9 @@
 <p>これでアクセスしてみると動きました。</p>
 <h2 id="_3">動作確認</h2>
 <p><a class="glightbox" href="../images/005-01.png"><img align="left" alt="" src="../images/005-01.png" width="30%"/></a></p>
-<p>各ページ下部に左図の通りコメントの入力フォームが表示されましたが、見てみたところ <strong>GitHub ユーザでログインする必要がある</strong>ように見えます。
+<p>各ページ下部に左図の通りコメントの入力フォームが表示されましたが、見てみたところ <strong>GitHub ユーザでログインする必要がある</strong> ように見えます。
 ログインしないとコメントは入力できません。
-<strong>リアクション</strong>という機能があって高評価、低評価などの反応を絵文字で付けることができるのですが、こちらも GitHub ユーザでログインしていないと付けることができません。
+<strong>リアクション</strong> という機能があって高評価、低評価などの反応を絵文字で付けることができるのですが、こちらも GitHub ユーザでログインしていないと付けることができません。
 Twitter アカウントや Google アカウント連携でできれば良かったのですが GitHub ユーザとなるとちょっと敷居が高いように思います。
 ただスパムで適当なコメントを連発されるような嫌がらせを避けるという意味では GitHub ユーザという出処がハッキリするというのは安心なのかもしれません。
 試しに GitHub アカウントでログインしてテストコメントをしてみます。</p>
@@ -337,7 +340,8 @@ Markdown も解釈されていて、見た目も大変良いです。
 リアクションという機能もちゃんと動作することが確認できました。
 コメントを編集・削除したい場合は GitHub の対象リポジトリの GitHub Discussions のページに遷移すると行うことができます。</p>
 <p>まとめると、コメントできる対象が GitHub ユーザであるという条件がついてしまうのが残念ですが、それ以外は非常に便利に使える良い機能と思いました。
-GitHub ユーザでない方のために<strong>GitHub アカウントをお持ちの方のみコメントすることができます。お持ちでない方はメールや Twitter などでご指摘ください</strong>
+GitHub ユーザでない方のために
+<strong>GitHub アカウントをお持ちの方のみコメントすることができます。お持ちでない方はメールや Twitter などでご指摘ください</strong>
 などといった注意書きを併記することで活用できれば良さそうです。</p>
 <!-- Giscus -->
 <h2 id="__comments">コメント</h2>

@@ -239,19 +239,20 @@
 <strong>PyCharm Community Edition</strong> を使用する形で紹介させていただきます。</p>
 <h2 id="pycharm">PyCharm</h2>
 <p><a class="glightbox" href="../images/002-01.png"><img align="left" alt="" src="../images/002-01.png" width="30%"/></a></p>
-<p><a href="https://www.jetbrains.com/ja-jp/pycharm/">PyCharm 公式サイト</a>にアクセスし Community Edition の最新版をダウンロードしてインストールします。
+<p><a href="https://www.jetbrains.com/ja-jp/pycharm/">PyCharm 公式サイト</a>
+にアクセスし Community Edition の最新版をダウンロードしてインストールします。
 Professional Edition では HTML や CSS, Python フレームワーク<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>のアシストなどの便利な機能を使用することができますが、今回は全く必要ありません<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>。
 デフォルトでは英語ですが、プラグインで日本語化して使用することができます。
-<strong>設定 -&gt; プラグイン -&gt; Japanese Language Pack / 日本語言語パック</strong>をインストールしてください。</p>
+<strong>設定 -&gt; プラグイン -&gt; Japanese Language Pack / 日本語言語パック</strong> をインストールしてください。</p>
 <p>MkDocs は Python で駆動するため PyCharm を使用しない場合は Python 実行環境のバイナリをシステムにインストールする必要がありますが、
-PyCharm を使用すると<strong>設定 -&gt; プロジェクト -&gt; Python インタープリタ</strong>からインストールすることができます。
+PyCharm を使用すると <strong>設定 -&gt; プロジェクト -&gt; Python インタープリタ</strong> からインストールすることができます。
 こういった感じですべて PyCharm 上から完結するところが便利です。</p>
 <p>いろいろなテーマを利用することができますが、個人的に綺麗だと思うのは Read the Docs テーマと mkdocs-material テーマです。
 前者はインストールせずに利用することができますが、後者を利用する場合はやはりインストールする必要があります。
-<code>pip3 install mkdocs-material</code> を叩くか PyCharm の<strong>設定 -&gt; プロジェクト -&gt; Python インタープリタ</strong>からインストールしてください。</p>
+<code>pip3 install mkdocs-material</code> を叩くか PyCharm の <strong>設定 -&gt; プロジェクト -&gt; Python インタープリタ</strong> からインストールしてください。</p>
 <h2 id="mkdocs">MkDocs</h2>
 <p>インストールした Python インタプリタ、若しくは <strong>venv</strong><sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup> に <code>mkdocs</code> パッケージをインストールします。
-コンソールから <code>pip3 install mkdocs</code> と叩いてもいいのですが PyCharm であれば<strong>設定 -&gt; プロジェクト -&gt; Python インタープリタ</strong>から簡単にインストールできます。</p>
+コンソールから <code>pip3 install mkdocs</code> と叩いてもいいのですが PyCharm であれば <strong>設定 -&gt; プロジェクト -&gt; Python インタープリタ</strong> から簡単にインストールできます。</p>
 <h2 id="github">GitHub</h2>
 <p>MkDocs はこれだけでもご使用いただけますが Markdown を記述したファイルを管理したりビルドした HTML やアセットを Web サーバにデプロイするのが面倒です。
 MkDocs は GitHub と最高の相性を誇ります<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup>ので GitHub のアカウントを取得しリポジトリを生成しておきましょう。</p>
