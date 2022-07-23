@@ -11,6 +11,8 @@ nav:
     - index.md
     - note/introduction.md
     - note/youtube.md
+  - 自戦記:
+    - otb/2022/0625.md
   - MkDocs:
     - mkdocs/001.md
     - mkdocs/002.md

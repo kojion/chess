@@ -9,7 +9,7 @@ image: note/images/introduction-01.jpg
 
 <figure markdown>
   ![](images/introduction-01.jpg){width="50%" class="img-center"}
-  <figcaption>YAMAHA BOLT in 霧ヶ峰</figcaption>
+  <figcaption>YAMAHA BOLT at 霧ヶ峰</figcaption>
 </figure>
 
 **コジオン** というハンドルネーム[^1]をかれこれ 20 年以上名乗っています。
