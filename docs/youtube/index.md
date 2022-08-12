@@ -2,7 +2,7 @@
 description: YouTube チャンネルの概要・沿革・始めたきっかけについてまとめています。 
 ---
 
-# YouTube チェス実況
+# YouTube でのチェス実況について
 
 ## 概要
 

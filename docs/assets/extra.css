@@ -69,11 +69,16 @@ dd {
 }
 
 /** 画像中央寄せ */
-.img-center {
+.md-typeset .img-center {
    margin: 0 auto;
 }
 
 /** 画像キャプション */
 .md-typeset figcaption {
     font-weight: bold;
+}
+
+/** テキスト中央寄せ */
+.md-typeset .text-center {
+    text-align: center;
 }
