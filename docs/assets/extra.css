@@ -70,7 +70,18 @@ dd {
 
 /** 画像中央寄せ */
 .md-typeset .img-center {
-   margin: 0 auto;
+    margin: 0 auto;
+    width: 80%;
+}
+@media screen and (min-width: 40em) {
+    .md-typeset .img-center {
+        width: 50%;
+    }
+}
+@media screen and (min-width: 76.25em) {
+    .md-typeset .img-center {
+        width: 30%;
+    }
 }
 
 /** 画像キャプション */
