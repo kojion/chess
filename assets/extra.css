@@ -17,7 +17,8 @@
 
 /** h2 */
 .md-typeset h2 {
-    font-size: 1.4em;
+    clear: both;
+    font-size: 1.3em;
     font-weight: bold;
 }
 
@@ -52,6 +53,12 @@ dd {
     font-size: 0.9em;
 }
 
+/** ヘアライン */
+.md-typeset hr {
+    margin: 16px 0;
+    clear: both;
+}
+
 /** テーブル */
 .md-typeset table:not([class]) {
     border: 0.05rem solid var(--md-primary-fg-color);
@@ -73,6 +80,11 @@ dd {
     width: 100%;
 }
 
+/** 画像右寄せ */
+.md-typeset .img-right {
+    width: 100%;
+}
+
 /** 画像中央寄せ */
 .md-typeset .img-center {
     margin: 0 auto;
@@ -82,8 +94,15 @@ dd {
 @media screen and (min-width: 40em) {
     .md-typeset .img-left {
         float: left;
-        width: 50%;
+        width: 40%;
         margin-right: 16px;
+        margin-bottom: 16px;
+    }
+    .md-typeset .img-right {
+        float: right;
+        width: 40%;
+        margin-left: 16px;
+        margin-bottom: 16px;
     }
     .md-typeset .img-center {
         width: 50%;
@@ -93,8 +112,15 @@ dd {
 @media screen and (min-width: 76.25em) {
     .md-typeset .img-left {
         float: left;
-        width: 30%;
+        width: 25%;
         margin-right: 16px;
+        margin-bottom: 16px;
+    }
+    .md-typeset .img-right {
+        float: right;
+        width: 25%;
+        margin-left: 16px;
+        margin-bottom: 16px;
     }
     .md-typeset .img-center {
         width: 30%;
@@ -107,8 +133,7 @@ dd {
 }
 
 /** 回り込み解除 */
-.md-typeset hr.clear-both {
-    border-width: 0;
+.md-typeset .clear-both {
     clear: both;
 }
 
