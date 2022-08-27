@@ -8,7 +8,7 @@ image: note/images/introduction-01.jpg
 ## 概要
 
 <figure markdown>
-  ![](images/introduction-01.jpg){width="50%" class="img-center"}
+  ![](images/introduction-01.jpg){class="img-center"}
   <figcaption>YAMAHA BOLT at 霧ヶ峰</figcaption>
 </figure>
 
