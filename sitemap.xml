@@ -36,6 +36,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://kojion.github.io/chess/mkdocs/007/</loc>
+         <lastmod>2022-08-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://kojion.github.io/chess/note/20220728/</loc>
          <lastmod>2022-08-27</lastmod>
          <changefreq>daily</changefreq>

@@ -106,6 +106,12 @@ dd {
     font-weight: bold;
 }
 
+/** 回り込み解除 */
+.md-typeset hr.clear-both {
+    border-width: 0;
+    clear: both;
+}
+
 /** テキスト中央寄せ */
 .md-typeset .text-center {
     text-align: center;
