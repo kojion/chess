@@ -68,17 +68,34 @@ dd {
     padding: 0.4em 1.0em;
 }
 
+/** 画像左寄せ */
+.md-typeset .img-left {
+    width: 100%;
+}
+
 /** 画像中央寄せ */
 .md-typeset .img-center {
     margin: 0 auto;
     width: 80%;
 }
+
 @media screen and (min-width: 40em) {
+    .md-typeset .img-left {
+        float: left;
+        width: 50%;
+        margin-right: 16px;
+    }
     .md-typeset .img-center {
         width: 50%;
     }
 }
+
 @media screen and (min-width: 76.25em) {
+    .md-typeset .img-left {
+        float: left;
+        width: 30%;
+        margin-right: 16px;
+    }
     .md-typeset .img-center {
         width: 30%;
     }
