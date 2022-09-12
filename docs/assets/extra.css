@@ -29,7 +29,7 @@
 }
 
 /** インラインコード */
-.md-typeset p > code {
+.md-typeset code {
     padding: 2px 8px;
     color: #e83e8c;
     background-color: #fafafa;
