@@ -62,9 +62,22 @@ description: YouTube チャンネルの概要・沿革・始めたきっかけ�
 
 チェス実況をやってみようという方の参考になるかもしれませんので、ここに記載しておきます。
 
+[Razer Seiren Mini](https://www.amazon.co.jp/Razer-%E3%82%B3%E3%83%B3%E3%83%87%E3%83%B3%E3%82%B5%E3%83%BC%E3%83%9E%E3%82%A4%E3%82%AF-%E8%B6%85%E3%82%B3%E3%83%B3%E3%83%91%E3%82%AF%E3%83%88%E8%A8%AD%E8%A8%88-Black%E3%80%90%E6%97%A5%E6%9C%AC%E6%AD%A3%E8%A6%8F%E4%BB%A3%E7%90%86%E5%BA%97%E4%BF%9D%E8%A8%BC%E5%93%81%E3%80%91-RZ19-03450100-R3M1/dp/B08NPRVBJT/)
+:   チェス実況 838 回目から使い始めました。
+安価なコンデンサーマイクです。
+確かに音質は良くなったのですが、そのままだとスタンドの高さが足りないのとポップノイズが入るという問題があったので別途
+[スタンド](https://www.amazon.co.jp/gp/product/B000TV16VW/) と
+[ポップフィルター](https://www.amazon.co.jp/gp/product/B08F4WPR7X/) を買いました。
+以下の動画でも紹介しておりますので、ご参照ください。
+
+<div class="text-center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NSU0AbcPH7Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 [エレコム ヘッドセット HS-NB05USV](https://www.amazon.co.jp/gp/product/B00M8VCL2Y/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&th=1)
-:   実売 1,500 円程度で購入できる安価なヘッドセットで、このマイクを使用しています。
-テレワークにも使用できまずので、コストパフォーマンスは抜群だと思います。
+:   チェス実況 1 回目から 837 回目まで使用していました。
+実売 1,500 円程度で購入できる安価なヘッドセットで、このマイクを使用しています。
+テレワークにも使用できますので、コストパフォーマンスは抜群だと思います。
 ちなみにロジクールの 10,000 円近くするヘッドセットも買って使ってみようと思ったことがあったのですが
 **このヘッドセットよりマイク音質が悪かった** ので断念しました。
 マイク音質に関しては値段ではなくちゃんとレビューを見るなどして確認するか、マイク単体の専用品を購入したほうがよさそうです。
