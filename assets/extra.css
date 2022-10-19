@@ -141,3 +141,10 @@ dd {
 .md-typeset .text-center {
     text-align: center;
 }
+
+/** 印刷用 */
+@media print {
+    h2#__comments,div.giscus {
+        display: none;
+    }
+}

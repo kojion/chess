@@ -5,12 +5,12 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<meta content="静的サイトジェネレータ MkDocs を使用するとどのように便利になるのかを記載しています。" name="description"/>
+<meta content="作成したドキュメントを PDF に変換する手法に関して書きます。" name="description"/>
 <meta content="Hideyuki Kojima" name="author"/>
-<link href="https://kojion.github.io/chess/mkdocs/001/" rel="canonical"/>
+<link href="https://kojion.github.io/chess/mkdocs/009/" rel="canonical"/>
 <link href="../../assets/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.3.0, mkdocs-material-8.2.15" name="generator"/>
-<title>はじめに - コジオン: チェス</title>
+<title>PDF 出力 - コジオン: チェス</title>
 <link href="../../assets/stylesheets/main.c382b1dc.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.cc9b2e1e.min.css" rel="stylesheet"/>
 <meta content="#02a6f2" name="theme-color"/>
@@ -23,20 +23,20 @@
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WE11TWYYEL"></script>
 <meta content="website" property="og:type"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="はじめに - コジオン: チェス" property="og:title"/>
-<meta content="はじめに - コジオン: チェス" name="twitter:title"/>
-<meta content="静的サイトジェネレータ MkDocs を使用するとどのように便利になるのかを記載しています。" property="og:description"/>
-<meta content="静的サイトジェネレータ MkDocs を使用するとどのように便利になるのかを記載しています。" name="twitter:description"/>
-<meta content="https://kojion.github.io/chess/mkdocs/images/002-01.png" property="og:image"/>
-<meta content="https://kojion.github.io/chess/mkdocs/images/002-01.png" name="twitter:image"/>
-<meta content="https://kojion.github.io/chess/mkdocs/001/" property="og:url"/>
+<meta content="PDF 出力 - コジオン: チェス" property="og:title"/>
+<meta content="PDF 出力 - コジオン: チェス" name="twitter:title"/>
+<meta content="作成したドキュメントを PDF に変換する手法に関して書きます。" property="og:description"/>
+<meta content="作成したドキュメントを PDF に変換する手法に関して書きます。" name="twitter:description"/>
+<meta content="https://kojion.github.io/chess/assets/twitter.jpg" property="og:image"/>
+<meta content="https://kojion.github.io/chess/assets/twitter.jpg" name="twitter:image"/>
+<meta content="https://kojion.github.io/chess/mkdocs/009/" property="og:url"/>
 <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>html.glightbox-open { overflow: initial; height: 100%; }</style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="orange" data-md-color-primary="light-blue" data-md-color-scheme="" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#_1">
+<a class="md-skip" href="#pdf">
           コンテンツにスキップ
         </a>
 </div>
@@ -60,7 +60,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              はじめに
+              PDF 出力
             
           </span>
 </div>
@@ -118,7 +118,7 @@
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="./">
+<a class="md-tabs__link md-tabs__link--active" href="../001/">
         MkDocs
       </a>
 </li>
@@ -250,33 +250,10 @@
           MkDocs
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          はじめに
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../001/">
         はじめに
       </a>
-<nav aria-label="目次" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      目次
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#mkdocs">
-    MkDocs を使う意味
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-    参考文献
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../002/">
@@ -313,10 +290,33 @@
         Admonition チートシート
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../009/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          PDF 出力
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         PDF 出力
       </a>
+<nav aria-label="目次" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    概要
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    余計な部分を出さないようにする
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -328,68 +328,30 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="_1">はじめに</h1>
-<h2 id="mkdocs">MkDocs を使う意味</h2>
-<p>チェスに関する内容をインターネットで公開する場合 Twitter などの SNS を使用したり
-YouTube などで動画を公開するなどの手法もありますが、旧来のブログ形式のほうが優れている点もいくつかあります:</p>
-<ol>
-<li>動画は特に実際の対局を見せたりする場合などは視覚的にわかりやすいが、全部見ようとすると時間がかかってしまう。自分にとって必要な部分だけピックアップして見るようなことも難しい。その点ブログは特にコラムのような内容であれば向いている</li>
-<li>Twitter などの SNS は他者とコミュニケーションを取るには優れているが、文字数制限があったりして長文は難しいし一覧性が乏しい。一つのまとまった内容を見せる場合はブログのほうが良い</li>
-</ol>
-<p>ブログを書く場合 <a href="https://chess.com/">Chess.com</a> や <a href="https://lichess.org/">lichess</a> にも独自のブログ機能が用意されています。
-各システムに強く紐づいている機能のため盤面をシームレスに貼れるなどの便利な機能はあるのですが、現時点で双方とも
-<strong>記事をカテゴリやタグなどで分類して絞り込んで表示することができない</strong><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> という仕様となっています。
-チェスプレイヤーであれば、例えば「自戦記」「オープニング研究」「雑記」などと分類したくなるところだと思いますが、それができないということです。
-雑多に表示された過去の記事タイトルから探し出すのは一覧性が良いとはいえません。</p>
-<p>通常では外部のブログサービスを借りて普通のブログとして書くのが良いでしょう。
-IT エンジニア向けの内容になってしまうとは思いますが、ここでは <strong>MkDocs</strong> という Markdown
-記法で書ける静的サイトジェネレータを使用して簡単にこういったドキュメンテーション・サイトを立ち上げる方法について書き残しておきます。</p>
-<p>MkDocs は Python で動きますが Python の知識は必要ありません。
-コマンドラインから多少のコマンドを叩くことができれば使用することができます。
-このサイトが行っているように GitHub を使用すると Markdown ファイルのバージョン管理やデプロイが簡単にできるようになるためお勧めですが、その場合多少の Git (GitHub) の知識が必要となります。</p>
-<div class="admonition question">
-<p class="admonition-title">Markdown とは何でしょうか？</p>
-<p><strong>Markdown</strong> とは文書を記述するための軽量マークアップ言語のひとつです。
-Web サイトであれば通常は HTML で記述することになりますが、入れ子になる HTML タグより Markdown で記述したほうが遥かに簡潔なソースとなります。
-また Markdown はパーサに解釈されていないソースを人間が直接読んだ時も読みやすいのが特徴です。
-以前は Sphinx を使用して <strong>reStructuredText</strong><sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> で書くのが普通でしたが、登場からあまりの書きやすさで瞬く間に Markdown がデファクト・スタンダードの扱いとなりました。</p>
-<p>尚 lichess のブログ機能でも Markdown 記法をサポートしており、簡単に文章を装飾させて書くことができます。</p>
-</div>
-<h2 id="_2">参考文献</h2>
-<p>以下のサイトが参考になるかと思います:</p>
-<table>
-<thead>
-<tr>
-<th align="left">サイト</th>
-<th align="left">説明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><a href="https://www.mkdocs.org/">MkDocs 公式 (英語)</a></td>
-<td align="left">公式サイトなので 1 回は見たいところです</td>
-</tr>
-<tr>
-<td align="left"><a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs (英語)</a></td>
-<td align="left">Material テーマのドキュメント。いろいろな機能が使えるのでお勧めです</td>
-</tr>
-<tr>
-<td align="left"><a href="https://zenn.dev/mebiusbox/articles/81d977a72cee01">MkDocsによるドキュメント作成</a></td>
-<td align="left">日本語の詳細なリファレンスなので目を通してみましょう</td>
-</tr>
-</tbody>
-</table>
-<div class="footnote">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>lichess ブログはタグ付けはできますが「執筆者のこのタグ」という絞り込みができず使いにくい仕様になっています <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
-</li>
-<li id="fn:2">
-<p>reST とも略されるこの記法は高機能ではありましたが、今となってはかなり複雑でした <a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">↩</a></p>
-</li>
-</ol>
-</div>
+<h1 id="pdf">PDF 出力</h1>
+<h2 id="_1">概要</h2>
+<p><a class="glightbox" href="../images/009-01.png"><img alt="" class="img-left" src="../images/009-01.png"/></a></p>
+<p>今まで見てきたように MkDocs は <code>mkdocs build</code> で HTML ドキュメントとして出力して配布することができます。
+しかし配布先によっては HTML ドキュメントはあまり好まれず PDF や Excel のようなフォーマットで欲しいと言われることがあります。
+なので Excel は難しいとしても PDF 出力はできるようにしておきたいところです。
+これに関しては <a href="https://github.com/orzih/mkdocs-with-pdf">mkdocs-with-pdf</a> のようなツールを使用したり
+<a href="https://wkhtmltopdf.org/">wkhtmltopdf</a> を使って HTML から PDF
+に変換するなどの方法もありますが、ビルドが通らなかったり若干癖があったりして思った通りにならなかったりします。</p>
+<p>そこで私が最も簡単だと思った方法は <strong>印刷で PDF 出力</strong> するものです。
+例えば Chrome で印刷メニューを押した時は左図の通り送信先として <strong>プリンターではなく PDF に保存を選択</strong> できます。
+Edge でも印刷メニューでプリンターとして PDF として保存を選択できます。
+HTML 1 つずつ印刷する必要があって大量にドキュメントがある場合は面倒ですが、確実です。</p>
+<h2 id="_2">余計な部分を出さないようにする</h2>
+<p>何も考えずに PDF 出力しようとしてしまうと不要な部分も出力されてしまうこともあると思います。
+そこは拡張 CSS に印刷時に適用するスタイルとして以下のように書きます:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c">/** 印刷用 */</span><span class="w"></span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="p">@</span><span class="k">media</span><span class="w"> </span><span class="nt">print</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="o">//</span><span class="w"> </span><span class="nt">印刷時に消す項目を列挙</span><span class="w"></span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="nt">h2</span><span class="p">#</span><span class="nn">__comments</span><span class="o">,</span><span class="nt">div</span><span class="p">.</span><span class="nc">giscus</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">        </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span><span class="w"></span>
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
 <!-- Giscus -->
 <h2 id="__comments">コメント</h2>
 <script async="" crossorigin="anonymous" data-category="Announcements" data-category-id="DIC_kwDOHr3XS84CQVzN" data-emit-metadata="1" data-input-position="top" data-lang="ja" data-loading="lazy" data-mapping="pathname" data-reactions-enabled="1" data-repo="kojion/chess" data-repo-id="R_kgDOHr3XSw" data-theme="light" src="https://giscus.app/client.js">
@@ -433,7 +395,7 @@ Web サイトであれば通常は HTML で記述することになりますが�
 </main>
 <footer class="md-footer">
 <nav aria-label="フッター" class="md-footer__inner md-grid">
-<a aria-label="前: 2022-06-25 北千住チェスクラブ" class="md-footer__link md-footer__link--prev" href="../../otb/2022/0625/" rel="prev">
+<a aria-label="前: Admonition チートシート" class="md-footer__link md-footer__link--prev" href="../008/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -442,21 +404,8 @@ Web サイトであれば通常は HTML で記述することになりますが�
 <span class="md-footer__direction">
                 前
               </span>
-              2022-06-25 北千住チェスクラブ
+              Admonition チートシート
             </div>
-</div>
-</a>
-<a aria-label="次: 環境構築" class="md-footer__link md-footer__link--next" href="../002/" rel="next">
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                次
-              </span>
-              環境構築
-            </div>
-</div>
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
 </div>
 </a>
 </nav>
