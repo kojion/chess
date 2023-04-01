@@ -2,127 +2,107 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://kojion.github.io/chess/</loc>
-         <lastmod>2023-03-07</lastmod>
+         <lastmod>2023-04-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kojion.github.io/chess/mkdocs/001/</loc>
-         <lastmod>2023-03-07</lastmod>
+         <lastmod>2023-04-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kojion.github.io/chess/mkdocs/002/</loc>
-         <lastmod>2023-03-07</lastmod>
+         <lastmod>2023-04-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kojion.github.io/chess/mkdocs/003/</loc>
-         <lastmod>2023-03-07</lastmod>
+         <lastmod>2023-04-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kojion.github.io/chess/mkdocs/004/</loc>
-         <lastmod>2023-03-07</lastmod>
+         <lastmod>2023-04-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kojion.github.io/chess/mkdocs/005/</loc>
-         <lastmod>2023-03-07</lastmod>
+         <lastmod>2023-04-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kojion.github.io/chess/mkdocs/006/</loc>
-         <lastmod>2023-03-07</lastmod>
+         <lastmod>2023-04-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kojion.github.io/chess/mkdocs/007/</loc>
-         <lastmod>2023-03-07</lastmod>
+         <lastmod>2023-04-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kojion.github.io/chess/mkdocs/008/</loc>
-         <lastmod>2023-03-07</lastmod>
+         <lastmod>2023-04-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kojion.github.io/chess/mkdocs/009/</loc>
-         <lastmod>2023-03-07</lastmod>
+         <lastmod>2023-04-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kojion.github.io/chess/note/20220728/</loc>
-         <lastmod>2023-03-07</lastmod>
+         <lastmod>2023-04-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kojion.github.io/chess/note/20220913/</loc>
-         <lastmod>2023-03-07</lastmod>
+         <lastmod>2023-04-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kojion.github.io/chess/note/20221117/</loc>
-         <lastmod>2023-03-07</lastmod>
+         <lastmod>2023-04-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kojion.github.io/chess/note/20221219/</loc>
-         <lastmod>2023-03-07</lastmod>
+         <lastmod>2023-04-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kojion.github.io/chess/note/20230125/</loc>
-         <lastmod>2023-03-07</lastmod>
+         <lastmod>2023-04-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kojion.github.io/chess/note/20230308/</loc>
-         <lastmod>2023-03-07</lastmod>
+         <lastmod>2023-04-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kojion.github.io/chess/note/introduction/</loc>
-         <lastmod>2023-03-07</lastmod>
+         <lastmod>2023-04-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kojion.github.io/chess/note/youtube/</loc>
+         <lastmod>2023-04-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kojion.github.io/chess/otb/2022/0625/</loc>
-         <lastmod>2023-03-07</lastmod>
+         <lastmod>2023-04-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kojion.github.io/chess/otb/2022/0723/</loc>
-         <lastmod>2023-03-07</lastmod>
+         <lastmod>2023-04-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kojion.github.io/chess/otb/2022/1009/</loc>
-         <lastmod>2023-03-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://kojion.github.io/chess/youtube/</loc>
-         <lastmod>2023-03-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://kojion.github.io/chess/youtube/009/00802/</loc>
-         <lastmod>2023-03-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://kojion.github.io/chess/youtube/009/00808/</loc>
-         <lastmod>2023-03-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://kojion.github.io/chess/youtube/009/00834/</loc>
-         <lastmod>2023-03-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://kojion.github.io/chess/youtube/009/00893/</loc>
-         <lastmod>2023-03-07</lastmod>
+         <lastmod>2023-04-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
