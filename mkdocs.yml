@@ -10,14 +10,15 @@ nav:
   - 雑記:
     - index.md
     - note/introduction.md
-    - note/20230308.md
-    - note/20230125.md
-    - note/20221219.md
-    - note/20221117.md
-    - note/20220913.md
-    - note/20220728.md
-  - チェス実況:
-    - youtube/index.md
+    - note/youtube.md
+    - 2023 年:
+      - note/20230308.md
+      - note/20230125.md
+    - 2022 年:
+      - note/20221219.md
+      - note/20221117.md
+      - note/20220913.md
+      - note/20220728.md
   - 自戦記:
     - otb/2022/1009.md
     - otb/2022/0723.md
@@ -49,7 +50,6 @@ theme:
   features:
     - navigation.tabs
     - navigation.top
-    - navigation.expand
     - toc.integrate
 
 # Google Analytics

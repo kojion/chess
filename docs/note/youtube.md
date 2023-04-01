@@ -7,7 +7,7 @@ description: YouTube チャンネルの概要・沿革・始めたきっかけ�
 ## 概要
 
 [コジオン: チェス実況](https://www.youtube.com/channel/UCVqCcOKMgrti7Y5v20GX0oA) という YouTube チャンネルを公開しています。
-[lichess](https://lichess.org) か [Chess.com](https://chess.com) で 5 分ブリッツ[^1]のチェス実況動画を毎日投稿しています。
+[lichess](https://lichess.org) か [Chess.com](https://chess.com) で 10 分ラピッド[^1]のチェス実況動画を毎日投稿しています。
 チェス実況動画投稿数が 10 の倍数となった時に[記念動画](https://www.youtube.com/playlist?list=PLuTCR8HE9G1ID0z51Hw8I7fgGZZcF5eiH)
 と称して **チェスに関係のある普段の実況以外の動画** を 1 回投稿します。
 基本的にはその繰り返しのチャンネルとなります。
@@ -34,6 +34,7 @@ description: YouTube チャンネルの概要・沿革・始めたきっかけ�
 
 |日付|概要|備考|
 |:--|:--|:--|
+|2023-04-02|チェス実況 1000 回達成|ここでブリッツ 5 分戦の実況を終えてラピッド 10 分戦に移行することにした|
 |2023-01-10|登録者 500 人達成||
 |2022-08-02|登録者 400 人達成|長らく停滞していたがオリンピアードで徐々に増えた|
 |2021-09-15|登録者 300 人達成||
@@ -92,13 +93,21 @@ description: YouTube チャンネルの概要・沿革・始めたきっかけ�
 [Bandicut](https://www.bandicam.jp/bandicut-video-cutter/)
 :   動画の切り出し・結合に特化したソフトです。
 後述の動画編集ソフトと機能的には競合するのですが、このソフトは **Bandicam と最高の親和性を誇り** 高速で処理できるのが特長です。
-実況動画を撮る際に毎回切り出しているので、個人的には Bandicam と合わせて必須のソフトとなっています。
+実況動画を撮る際に毎回切り出しているので個人的には Bandicam と合わせて必須のソフトとなっていましたが、チェス実況
+941 回目から後述の Filmora 無音検出に移行したため普段は使わなくなりました。
 
 [Filmora](https://filmora.wondershare.jp/)
 :   **フィモーラ** と読みます。
-普段の実況動画では使用していませんが、500 回を越えたあたりから記念動画の編集作業を行うために使い始めました。
-動画編集初心者にも使いやすいように分かりやすい UI になっているのが特長らしく、私でも難なく使うことができました。
+500 回を越えたあたりから記念動画の編集作業を行うために使い始めました。
+動画編集初心者にも使いやすいように分かりやすい UI になっているのが特長らしく、私でも難なく使えました。
 動画編集のプロになりたいわけではないのでこれで十分ですし、値段も手頃で良いと思います。
+5 分ブリッツから 10 分ラピッドに移行する際に動画時間が長くなることが懸念されたので対応策を考えていたのですが、この
+Filmora が最新のバージョンで持つ **無音検出** という機能がなかなか有用で今回の要件を満たしてくれました。
+以下の動画でも紹介しておりますので、ご参照ください。
+
+<div class="text-center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RAZ2lGQfG34" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 [^1]: 但し切れ負けではなくインクリメントのあるフィッシャールールとします
 [^2]: 今は配信メインになっていると思いますが、当時は対局動画のみを毎日投稿されていました
