@@ -6,8 +6,11 @@
 [雑記](note/introduction.md)
 :   チェスや YouTube チャンネルに関する雑多な文章や記録などを掲載します。
 
+[オープニング研究](opening/anti-london-system/001.md)
+:   私が指すオープニングの独自の研究内容を発表します。
+
 [自戦記](otb/2022/1009.md)
-:   主に OTB で指したチェスの棋譜及び検討を行う予定です。
+:   主に OTB で指したチェスの棋譜及び検討を行います。
 
 [MkDocs](mkdocs/001.md)
 :   このサイトは [MkDocs](https://www.mkdocs.org/) という静的サイトジェネレータを使用して作成しています。
