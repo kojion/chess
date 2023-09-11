@@ -21,7 +21,8 @@
 
 | 日付         | 内容                                                                             |
 |:-----------|:-------------------------------------------------------------------------------|
-| 2023-07-25 | [Crazy Knight Attack 実践例: 4. Bg3 Qb6 5. c4](opening/anti-london-system/002.md) |
+| 2023-09-11 | [3. c3 Qb6 実戦例: 4. Qd2 e6](opening/anti-london-system/003.md)                  |
+| 2023-07-25 | [Crazy Knight Attack 実戦例: 4. Bg3 Qb6 5. c4](opening/anti-london-system/002.md) |
 | 2023-06-11 | [2023-06-10 全日本ラピッド選手権](otb/2023/0610.md)                                      |
 | 2023-05-26 | [アンチ・ロンドン・システムの紹介](opening/anti-london-system/001.md)                          |
 | 2023-04-02 | ラピッドに移行するのと機材が変わったので [YouTube チャンネルについて](note/youtube.md) を更新                  |
