@@ -1,458 +1,1419 @@
 
-<!DOCTYPE html>
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="MkDocs における mkdocs.yml のこれは便利だと思った設定に関して記載しています。">
+      
+      
+        <meta name="author" content="Hideyuki Kojima">
+      
+      
+        <link rel="canonical" href="https://kojion.github.io/chess/mkdocs/004/">
+      
+      
+        <link rel="prev" href="../003/">
+      
+      
+        <link rel="next" href="../005/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.11">
+    
+    
+      
+        <title>mkdocs.yml 設定 - コジオン: チェス</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
 
-<html class="no-js" lang="ja">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width,initial-scale=1" name="viewport"/>
-<meta content="MkDocs における mkdocs.yml のこれは便利だと思った設定に関して記載しています。" name="description"/>
-<meta content="Hideyuki Kojima" name="author"/>
-<link href="https://kojion.github.io/chess/mkdocs/004/" rel="canonical"/>
-<link href="../../assets/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.3.0, mkdocs-material-8.2.15" name="generator"/>
-<title>mkdocs.yml 設定 - コジオン: チェス</title>
-<link href="../../assets/stylesheets/main.c382b1dc.min.css" rel="stylesheet"/>
-<link href="../../assets/stylesheets/palette.cc9b2e1e.min.css" rel="stylesheet"/>
-<meta content="#02a6f2" name="theme-color"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css?family=BIZ+UDPGothic:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
-<style>:root{--md-text-font:"BIZ UDPGothic";--md-code-font:"JetBrains Mono"}</style>
-<link href="../../assets/extra.css" rel="stylesheet"/>
-<script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-WE11TWYYEL"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&gtag("event","search",{search_term:this.value})}),"undefined"!=typeof location$&&location$.subscribe(function(e){gtag("config","G-WE11TWYYEL",{page_path:e.pathname})})})</script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WE11TWYYEL"></script>
-<meta content="website" property="og:type"/>
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="mkdocs.yml 設定 - コジオン: チェス" property="og:title"/>
-<meta content="mkdocs.yml 設定 - コジオン: チェス" name="twitter:title"/>
-<meta content="MkDocs における mkdocs.yml のこれは便利だと思った設定に関して記載しています。" property="og:description"/>
-<meta content="MkDocs における mkdocs.yml のこれは便利だと思った設定に関して記載しています。" name="twitter:description"/>
-<meta content="https://kojion.github.io/chess/assets/twitter.jpg" property="og:image"/>
-<meta content="https://kojion.github.io/chess/assets/twitter.jpg" name="twitter:image"/>
-<meta content="https://kojion.github.io/chess/mkdocs/004/" property="og:url"/>
-<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>html.glightbox-open { overflow: initial; height: 100%; }</style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
-<body data-md-color-accent="orange" data-md-color-primary="light-blue" data-md-color-scheme="" dir="ltr">
-<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
-<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
-<label class="md-overlay" for="__drawer"></label>
-<div data-md-component="skip">
-<a class="md-skip" href="#mkdocsyml">
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=BIZ+UDPGothic:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"BIZ UDPGothic";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-WE11TWYYEL"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-WE11TWYYEL",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-WE11TWYYEL",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  
+  
+    
+  
+  
+  
+    
+  
+  
+  
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:title" content="mkdocs.yml 設定 - コジオン: チェス">
+  <meta name="twitter:title" content="mkdocs.yml 設定 - コジオン: チェス">
+  <meta property="og:description" content="MkDocs における mkdocs.yml のこれは便利だと思った設定に関して記載しています。">
+  <meta name="twitter:description" content="MkDocs における mkdocs.yml のこれは便利だと思った設定に関して記載しています。">
+  <meta property="og:image" content="https://kojion.github.io/chess/assets/twitter.jpg">
+  <meta name="twitter:image" content="https://kojion.github.io/chess/assets/twitter.jpg">
+  <meta property="og:url" content="https://kojion.github.io/chess/mkdocs/004/">
+
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mkdocsyml" class="md-skip">
           コンテンツにスキップ
         </a>
-</div>
-<div data-md-component="announce">
-</div>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
 <header class="md-header" data-md-component="header">
-<nav aria-label="ヘッダー" class="md-header__inner md-grid">
-<a aria-label="コジオン: チェス" class="md-header__button md-logo" data-md-component="logo" href="../.." title="コジオン: チェス">
-<img alt="logo" src="../../assets/logo.png"/>
-</a>
-<label class="md-header__button md-icon" for="__drawer">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
-</label>
-<div class="md-header__title" data-md-component="header-title">
-<div class="md-header__ellipsis">
-<div class="md-header__topic">
-<span class="md-ellipsis">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../.." title="コジオン: チェス" class="md-header__button md-logo" aria-label="コジオン: チェス" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
             コジオン: チェス
           </span>
-</div>
-<div class="md-header__topic" data-md-component="header-topic">
-<span class="md-ellipsis">
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
             
               mkdocs.yml 設定
             
           </span>
-</div>
-</div>
-</div>
-<label class="md-header__button md-icon" for="__search">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
-</label>
-<div class="md-search" data-md-component="search" role="dialog">
-<label class="md-search__overlay" for="__search"></label>
-<div class="md-search__inner" role="search">
-<form class="md-search__form" name="search">
-<input aria-label="検索" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="検索" required="" spellcheck="false" type="text"/>
-<label class="md-search__icon md-icon" for="__search">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
-</label>
-<nav aria-label="Search" class="md-search__options">
-<button aria-label="クリア" class="md-search__icon md-icon" tabindex="-1" type="reset">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
-</button>
-</nav>
-</form>
-<div class="md-search__output">
-<div class="md-search__scrollwrap" data-md-scrollfix="">
-<div class="md-search-result" data-md-component="search-result">
-<div class="md-search-result__meta">
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="検索">
+        
+        <button type="reset" class="md-search__icon md-icon" title="クリア" aria-label="クリア" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
             検索を初期化
           </div>
-<ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-</nav>
+    
+    
+  </nav>
+  
 </header>
-<div class="md-container" data-md-component="container">
-<nav aria-label="タブ" class="md-tabs" data-md-component="tabs">
-<div class="md-tabs__inner md-grid">
-<ul class="md-tabs__list">
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../..">
-        雑記
-      </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../opening/anti-london-system/001/">
-        オープニング研究
-      </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../otb/2023/1015/">
-        自戦記
-      </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../001/">
-        MkDocs
-      </a>
-</li>
-</ul>
-</div>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="タブ" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  雑記
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../opening/anti-london-system/001/" class="md-tabs__link">
+          
+  
+  オープニング研究
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../otb/2023/1015/" class="md-tabs__link">
+          
+  
+  自戦記
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../001/" class="md-tabs__link">
+          
+  
+  MkDocs
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
 </nav>
-<main class="md-main" data-md-component="main">
-<div class="md-main__inner md-grid">
-<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
-<div class="md-sidebar__scrollwrap">
-<div class="md-sidebar__inner">
-<nav aria-label="ナビゲーション" class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" data-md-level="0">
-<label class="md-nav__title" for="__drawer">
-<a aria-label="コジオン: チェス" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="コジオン: チェス">
-<img alt="logo" src="../../assets/logo.png"/>
-</a>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="コジオン: チェス" class="md-nav__button md-logo" aria-label="コジオン: チェス" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
     コジオン: チェス
   </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" id="__nav_1" type="checkbox"/>
-<label class="md-nav__link" for="__nav_1">
-          雑記
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    雑記
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            雑記
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    このサイトについて
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../note/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    自己紹介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../note/youtube/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    YouTube でのチェス実況について
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2023 年
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            2023 年
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../note/20231111/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11 月 11 日: チェス界で社会的に殺されたのではないかと思った話
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../note/20230308/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3 月 8 日: ネットでみるチェスプレイヤーの平均像
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../note/20230125/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1 月 25 日: はじめてロジカル・チェスを読んで思ったこと
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2022 年
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            2022 年
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../note/20221219/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12 月 19 日: 変則チェス九番勝負
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../note/20221117/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11 月 17 日: 勝てないと普通に凹む
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../note/20220913/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9 月 13 日: ルイ・ロペスは初級者にとってどうなのか
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../note/20220728/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7 月 28 日: シャンチーをやってみたという話
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    オープニング研究
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            オープニング研究
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    アンチ・ロンドン・システム
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            アンチ・ロンドン・システム
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../opening/anti-london-system/001/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    アンチ・ロンドン・システムの紹介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_2" id="__nav_2_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Crazy Knight Attack 実戦例
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Crazy Knight Attack 実戦例
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../opening/anti-london-system/002/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Bg3 Qb6 5. c4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_3" id="__nav_2_1_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    3. c3 Qb6 実戦例
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            3. c3 Qb6 実戦例
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../opening/anti-london-system/003/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Qd2 e6
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    自戦記
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            自戦記
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../otb/2023/1015/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2023-10-15 東京チェスフェスティバル 2023 Rapid Sunday
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../otb/2023/0610/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2023-06-10,11 全日本ラピッドチェス選手権 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../otb/2022/1009/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2022-10-09 東京チェスフェスティバル
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../otb/2022/0723/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2022-07-23 北千住チェスクラブ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../otb/2022/0625/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2022-06-25 北千住チェスクラブ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    MkDocs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            MkDocs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../001/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    はじめに
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../002/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    環境構築
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../003/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    動作確認
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    mkdocs.yml 設定
+  </span>
+  
+
           <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="雑記" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_1">
-<span class="md-nav__icon md-icon"></span>
-          雑記
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../..">
-        このサイトについて
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    mkdocs.yml 設定
+  </span>
+  
+
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../note/introduction/">
-        自己紹介
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../note/youtube/">
-        YouTube でのチェス実況について
-      </a>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_4" id="__nav_1_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_1_4">
-          2023 年
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="2023 年" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_1_4">
-<span class="md-nav__icon md-icon"></span>
-          2023 年
-        </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../note/20231111/">
-        11 月 11 日: チェス界で社会的に殺されたのではないかと思った話
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../note/20230308/">
-        3 月 8 日: ネットでみるチェスプレイヤーの平均像
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../note/20230125/">
-        1 月 25 日: はじめてロジカル・チェスを読んで思ったこと
-      </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5" id="__nav_1_5" type="checkbox"/>
-<label class="md-nav__link" for="__nav_1_5">
-          2022 年
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="2022 年" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_1_5">
-<span class="md-nav__icon md-icon"></span>
-          2022 年
-        </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../note/20221219/">
-        12 月 19 日: 変則チェス九番勝負
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../note/20221117/">
-        11 月 17 日: 勝てないと普通に凹む
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../note/20220913/">
-        9 月 13 日: ルイ・ロペスは初級者にとってどうなのか
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../note/20220728/">
-        7 月 28 日: シャンチーをやってみたという話
-      </a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2">
-          オープニング研究
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="オープニング研究" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_2">
-<span class="md-nav__icon md-icon"></span>
-          オープニング研究
-        </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" id="__nav_2_1" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_1">
-          アンチ・ロンドン・システム
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="アンチ・ロンドン・システム" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_1">
-<span class="md-nav__icon md-icon"></span>
-          アンチ・ロンドン・システム
-        </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../opening/anti-london-system/001/">
-        アンチ・ロンドン・システムの紹介
-      </a>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_2" id="__nav_2_1_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_1_2">
-          Crazy Knight Attack 実戦例
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Crazy Knight Attack 実戦例" class="md-nav" data-md-level="3">
-<label class="md-nav__title" for="__nav_2_1_2">
-<span class="md-nav__icon md-icon"></span>
-          Crazy Knight Attack 実戦例
-        </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../opening/anti-london-system/002/">
-        4. Bg3 Qb6 5. c4
-      </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_3" id="__nav_2_1_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_1_3">
-          3. c3 Qb6 実戦例
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="3. c3 Qb6 実戦例" class="md-nav" data-md-level="3">
-<label class="md-nav__title" for="__nav_2_1_3">
-<span class="md-nav__icon md-icon"></span>
-          3. c3 Qb6 実戦例
-        </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../opening/anti-london-system/003/">
-        4. Qd2 e6
-      </a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3">
-          自戦記
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="自戦記" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_3">
-<span class="md-nav__icon md-icon"></span>
-          自戦記
-        </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../otb/2023/1015/">
-        2023-10-15 東京チェスフェスティバル 2023 Rapid Sunday
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../otb/2023/0610/">
-        2023-06-10,11 全日本ラピッドチェス選手権 2023
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../otb/2022/1009/">
-        2022-10-09 東京チェスフェスティバル
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../otb/2022/0723/">
-        2022-07-23 北千住チェスクラブ
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../otb/2022/0625/">
-        2022-06-25 北千住チェスクラブ
-      </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4">
-          MkDocs
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="MkDocs" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_4">
-<span class="md-nav__icon md-icon"></span>
-          MkDocs
-        </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../001/">
-        はじめに
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../002/">
-        環境構築
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../003/">
-        動作確認
-      </a>
-</li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          mkdocs.yml 設定
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
-        mkdocs.yml 設定
-      </a>
-<nav aria-label="目次" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
       目次
     </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#nav">
-    nav
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nav" class="md-nav__link">
+    <span class="md-ellipsis">
+      nav
+    </span>
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#theme">
-    theme
+      
+        <li class="md-nav__item">
+  <a href="#theme" class="md-nav__link">
+    <span class="md-ellipsis">
+      theme
+    </span>
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#extra_cssextra_javascript">
-    extra_css,extra_javascript
+      
+        <li class="md-nav__item">
+  <a href="#extra_cssextra_javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      extra_css,extra_javascript
+    </span>
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#plugin">
-    plugin
+      
+        <li class="md-nav__item">
+  <a href="#plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      plugin
+    </span>
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#markdown_extensions">
-    markdown_extensions
+      
+        <li class="md-nav__item">
+  <a href="#markdown_extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      markdown_extensions
+    </span>
   </a>
+  
 </li>
-</ul>
+      
+    </ul>
+  
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../005/">
-        Giscus
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../005/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Giscus
+  </span>
+  
+
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../006/">
-        Twitter Cards
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../006/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Twitter Cards
+  </span>
+  
+
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../007/">
-        画像を快適に使う
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../007/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    画像を快適に使う
+  </span>
+  
+
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../008/">
-        Admonition チートシート
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../008/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Admonition チートシート
+  </span>
+  
+
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../009/">
-        PDF 出力
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../009/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PDF 出力
+  </span>
+  
+
       </a>
-</li>
-</ul>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
 </nav>
-</li>
-</ul>
-</nav>
-</div>
-</div>
-</div>
-<div class="md-content" data-md-component="content">
-<article class="md-content__inner md-typeset">
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+  
+                  
+
+
 <h1 id="mkdocsyml">mkdocs.yml 設定</h1>
 <p><code>mkdocs.yml</code> で設定を変更することでさまざまな機能を付加して便利に使用することができます。
 個人的にこれはと思った設定項目を紹介します。</p>
@@ -465,11 +1426,11 @@
 しかしこれだと意図しない並びや名前になったりすることがあると思います。
 その場合 <code>nav</code> で定義することにより自分でリンク名や並び順を決めることができます。
 追加する度に記述するのが多少面倒ですが、致し方ないかなと思います。</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nt">nav</span><span class="p">:</span><span class="w"></span>
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index.md</span><span class="w"></span>
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">MkDocs</span><span class="p">:</span><span class="w"></span>
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mkdocs/001.md</span><span class="w">  </span><span class="c1"># この記述の場合対象ドキュメントの &lt;h1&gt; が自動的に使用される</span><span class="w"></span>
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">ほげふが</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mkdocs/002.md</span><span class="w">  </span><span class="c1"># 題名「ほげふが」を明示的に指定する</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">nav</span><span class="p">:</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index.md</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">MkDocs</span><span class="p">:</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mkdocs/001.md</span><span class="w">  </span><span class="c1"># この記述の場合対象ドキュメントの &lt;h1&gt; が自動的に使用される</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">ほげふが</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mkdocs/002.md</span><span class="w">  </span><span class="c1"># 題名「ほげふが」を明示的に指定する</span>
 </code></pre></div>
 <h2 id="theme">theme</h2>
 <p>テーマを設定します。
@@ -488,39 +1449,39 @@
 </dl>
 <p><a href="https://dev.classmethod.jp/articles/material-for-mkdocs-customization-about-navigation/">クラスメソッド様の記事</a> が大変参考になりました。
 私は最終的に以下のような設定に落ち着きました:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nt">theme</span><span class="p">:</span><span class="w"></span>
-<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">'material'</span><span class="w"></span>
-<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">  </span><span class="nt">language</span><span class="p">:</span><span class="w"> </span><span class="s">'ja'</span><span class="w"></span>
-<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">  </span><span class="nt">logo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">assets/logo.png</span><span class="w"></span>
-<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">  </span><span class="nt">favicon</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">assets/favicon.png</span><span class="w"></span>
-<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">  </span><span class="nt">palette</span><span class="p">:</span><span class="w"></span>
-<a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">    </span><span class="nt">primary</span><span class="p">:</span><span class="w"> </span><span class="s">'light</span><span class="nv"> </span><span class="s">blue'</span><span class="w"></span>
-<a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">    </span><span class="nt">accent</span><span class="p">:</span><span class="w"> </span><span class="s">'orange'</span><span class="w"></span>
-<a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">  </span><span class="nt">font</span><span class="p">:</span><span class="w"></span>
-<a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">'BIZ</span><span class="nv"> </span><span class="s">UDPGothic'</span><span class="w"></span>
-<a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">    </span><span class="nt">code</span><span class="p">:</span><span class="w"> </span><span class="s">'JetBrains</span><span class="nv"> </span><span class="s">Mono'</span><span class="w"></span>
-<a href="#__codelineno-1-12" id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">  </span><span class="nt">features</span><span class="p">:</span><span class="w"></span>
-<a href="#__codelineno-1-13" id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">navigation.tabs</span><span class="w"></span>
-<a href="#__codelineno-1-14" id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">navigation.top</span><span class="w"></span>
-<a href="#__codelineno-1-15" id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">toc.integrate</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">theme</span><span class="p">:</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;material&#39;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nt">language</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;ja&#39;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nt">logo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">assets/logo.png</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="nt">favicon</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">assets/favicon.png</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="nt">palette</span><span class="p">:</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="nt">primary</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;light</span><span class="nv"> </span><span class="s">blue&#39;</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="nt">accent</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;orange&#39;</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">  </span><span class="nt">font</span><span class="p">:</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;BIZ</span><span class="nv"> </span><span class="s">UDPGothic&#39;</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="nt">code</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;JetBrains</span><span class="nv"> </span><span class="s">Mono&#39;</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">  </span><span class="nt">features</span><span class="p">:</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">navigation.tabs</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">navigation.top</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">toc.integrate</span>
 </code></pre></div>
 <h2 id="extra_cssextra_javascript">extra_css,extra_javascript</h2>
 <p>見た目や挙動をカスタマイズするために別途 CSS や JavaScript ファイルを追加することができます。
 例えば以下のように指定して対象ディレクトリにファイルを配置します:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1"># 拡張 CSS</span><span class="w"></span>
-<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="nt">extra_css</span><span class="p">:</span><span class="w"></span>
-<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">assets/extra.css</span><span class="w"></span>
-<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>
-<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="c1"># 拡張 JavaScript</span><span class="w"></span>
-<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="nt">extra_javascript</span><span class="p">:</span><span class="w"></span>
-<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">assets/extra.js</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># 拡張 CSS</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nt">extra_css</span><span class="p">:</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">assets/extra.css</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="c1"># 拡張 JavaScript</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="nt">extra_javascript</span><span class="p">:</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">assets/extra.js</span>
 </code></pre></div>
 <h2 id="plugin">plugin</h2>
 <p>使用するプラグインを指定します。
 Material テーマでは日本語での検索ができるのですが、それを使用するためにここで以下のように指定します:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nt">plugins</span><span class="p">:</span><span class="w"></span>
-<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">search</span><span class="p">:</span><span class="w"></span>
-<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">      </span><span class="nt">lang</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ja</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">plugins</span><span class="p">:</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">search</span><span class="p">:</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">      </span><span class="nt">lang</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ja</span>
 </code></pre></div>
 <h2 id="markdown_extensions">markdown_extensions</h2>
 <p>その他 Markdown 拡張記法の追加を行い便利に利用できるようにします。
@@ -529,9 +1490,9 @@ Material テーマでは日本語での検索ができるのですが、それ�
 <dt>admonition</dt>
 <dd>メモ、ヒント、警告などを目立つように表示してくれる拡張機能です。見た目が良いのでおすすめです。</dd>
 </dl>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>!!! Note "Admonition テスト"
-<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>
-<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a>    こんな感じです。
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>!!! Note &quot;Admonition テスト&quot;
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    こんな感じです。
 </code></pre></div>
 <p>こう書くと以下のように表示されます:</p>
 <div class="admonition note">
@@ -544,9 +1505,9 @@ Material テーマでは日本語での検索ができるのですが、それ�
 <dt>codehilite</dt>
 <dd>コードブロックをハイライト表示してくれます。</dd>
 </dl>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="p">...</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"こんな感じです"</span><span class="p">);</span><span class="w"></span>
-<a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="p">...</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;こんな感じです&quot;</span><span class="p">);</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="p">}</span>
 </code></pre></div>
 <dl>
 <dt>def_list</dt>
@@ -556,10 +1517,10 @@ Material テーマでは日本語での検索ができるのですが、それ�
 <dd>タスクリストを定義することができます。タスク管理を行う場合に便利なのではないかと思います。</dd>
 </dl>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> やっていないこと</li>
-<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> やったこと<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> 入れ子 </li>
-<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> 入れ子 2</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> やっていないこと</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> やったこと<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 入れ子 </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 入れ子 2</li>
 </ul>
 </li>
 </ul>
@@ -571,32 +1532,65 @@ Material テーマでは日本語での検索ができるのですが、それ�
 <dd>HTML 記法の中でも Markdown を利用できるようになるとのことです。</dd>
 </dl>
 <p>結果的に以下のような指定に落ち着きました:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="nt">markdown_extensions</span><span class="p">:</span><span class="w"></span>
-<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">admonition</span><span class="w"></span>
-<a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">footnotes</span><span class="w"></span>
-<a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">codehilite</span><span class="w"></span>
-<a href="#__codelineno-6-5" id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">def_list</span><span class="w"></span>
-<a href="#__codelineno-6-6" id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pymdownx.tasklist</span><span class="p">:</span><span class="w"></span>
-<a href="#__codelineno-6-7" id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="w">  </span><span class="nt">custom_checkbox</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
-<a href="#__codelineno-6-8" id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">attr_list</span><span class="w"></span>
-<a href="#__codelineno-6-9" id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">md_in_html</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nt">markdown_extensions</span><span class="p">:</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">admonition</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">footnotes</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">codehilite</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">def_list</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pymdownx.tasklist</span><span class="p">:</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">  </span><span class="nt">custom_checkbox</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">attr_list</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">md_in_html</span>
 </code></pre></div>
 <p>尚、このサイトで最終的に使用している指定は <a href="https://github.com/kojion/chess/blob/main/mkdocs.yml">GitHub のリポジトリ</a>
 から参照できますので、参考になるかと思います。</p>
 <div class="footnote">
-<hr/>
+<hr />
 <ol>
 <li id="fn:1">
-<p>ここが注釈の概要です <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+<p>ここが注釈の概要です&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
-<!-- Giscus -->
-<h2 id="__comments">コメント</h2>
-<script async="" crossorigin="anonymous" data-category="Announcements" data-category-id="DIC_kwDOHr3XS84CQVzN" data-emit-metadata="1" data-input-position="top" data-lang="ja" data-loading="lazy" data-mapping="pathname" data-reactions-enabled="1" data-repo="kojion/chess" data-repo-id="R_kgDOHr3XSw" data-theme="light" src="https://giscus.app/client.js">
-</script>
-<!-- Synchronize Giscus theme with palette -->
-<script>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+
+  <!-- Giscus -->
+  <h2 id="__comments">コメント</h2>
+  <script src="https://giscus.app/client.js"
+        data-repo="kojion/chess"
+        data-repo-id="R_kgDOHr3XSw"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOHr3XS84CQVzN"
+        data-mapping="pathname"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="ja"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+  </script>
+
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
     var giscus = document.querySelector("script[src*=giscus]")
 
     /* Set palette on initial load */
@@ -624,76 +1618,85 @@ Material テーマでは日本語での検索ができるのですが、それ�
       })
     })
   </script>
-</article>
-</div>
-</div>
-<a class="md-top md-icon" data-md-component="top" data-md-state="hidden" href="#">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
-            Back to top
-          </a>
-</main>
-<footer class="md-footer">
-<nav aria-label="フッター" class="md-footer__inner md-grid">
-<a aria-label="前: 動作確認" class="md-footer__link md-footer__link--prev" href="../003/" rel="prev">
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
-</div>
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                前
-              </span>
-              動作確認
+
+              </article>
             </div>
-</div>
-</a>
-<a aria-label="次: Giscus" class="md-footer__link md-footer__link--next" href="../005/" rel="next">
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                次
-              </span>
-              Giscus
-            </div>
-</div>
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
-</div>
-</a>
-</nav>
-<div class="md-footer-meta md-typeset">
-<div class="md-footer-meta__inner md-grid">
-<div class="md-copyright">
-<div class="md-copyright__highlight">
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  ページトップへ戻る
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
       Copyright © 2022 Hideyuki Kojima.
     </div>
   
   
     Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
       Material for MkDocs
     </a>
+  
 </div>
-<div class="md-social">
-<a class="md-social__link" href="https://twitter.com/zbxah" rel="noopener" target="_blank" title="コジオン on Twitter">
-<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
-</a>
-<a class="md-social__link" href="https://github.com/kojion/chess" rel="noopener" target="_blank" title="GitHub Repository">
-<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
-</a>
-<a class="md-social__link" href="mailto:kojionilk@gmail.com" rel="noopener" target="_blank" title="Email to Kojion">
-<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="m511.6 36.86-64 415.1a32.008 32.008 0 0 1-31.65 27.147c-4.188 0-8.319-.815-12.29-2.472l-122.6-51.1-50.86 76.29C226.3 508.5 219.8 512 212.8 512c-11.5 0-20.8-9.3-20.8-20.8v-96.18c0-7.115 2.372-14.03 6.742-19.64L416 96 122.3 360.3 19.69 317.5C8.438 312.8.812 302.2.062 289.1s5.47-23.72 16.06-29.77l448-255.1c10.69-6.109 23.88-5.547 34 1.406S513.5 24.72 511.6 36.86z"></path></svg>
-</a>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://twitter.com/zbxah" target="_blank" rel="noopener" title="コジオン on Twitter" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/kojion/chess" target="_blank" rel="noopener" title="GitHub Repository" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:kojionilk@gmail.com" target="_blank" rel="noopener" title="Email to Kojion" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480v-83.6c0-4 1.5-7.8 4.2-10.7l167.6-182.9c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8l-88.3-44.2C7.1 311.3.3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4z"/></svg>
+    </a>
+  
 </div>
-</div>
-</div>
+      
+    </div>
+  </div>
 </footer>
-</div>
-<div class="md-dialog" data-md-component="dialog">
-<div class="md-dialog__inner md-typeset"></div>
-</div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "toc.integrate"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version.title": "Select version"}}</script>
-<script src="../../assets/javascripts/bundle.a6c66575.min.js"></script>
-<script src="../../assets/extra.js"></script>
-<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "width": "100%", "height": "auto", "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "toc.integrate"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+        <script src="../../assets/extra.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
