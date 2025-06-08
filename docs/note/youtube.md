@@ -9,7 +9,7 @@ description: YouTube チャンネルの概要・沿革・始めたきっかけ�
 [コジオン: チェス実況](https://www.youtube.com/channel/UCVqCcOKMgrti7Y5v20GX0oA) という YouTube チャンネルを公開しています。
 [lichess](https://lichess.org) か [Chess.com](https://chess.com) で 10 分ラピッド[^1]のチェス実況動画を毎日投稿しています。
 チェス実況動画投稿数が 10 の倍数となった時に[記念動画](https://www.youtube.com/playlist?list=PLuTCR8HE9G1ID0z51Hw8I7fgGZZcF5eiH)
-と称して **チェスに関係のある普段の実況以外の動画** を 1 回投稿します。
+と称して **普段のチェス実況以外の動画** を 1 回投稿します。
 基本的にはその繰り返しのチャンネルとなります。
 **試合に関しては一切選別なしで掲載する** というポリシーで運営しておりますので、時にはひどいブランダーの試合なども含まれるかもしれません。
 
